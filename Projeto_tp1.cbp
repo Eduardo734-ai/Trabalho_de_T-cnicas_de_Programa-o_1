@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Projeto_tp1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Projeto_tp1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="Includes" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Projeto_tp1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="Include" />
+		</Compiler>
+		<Unit filename="Include/Associacao/AssociacaoHistoriaPessoa.h" />
+		<Unit filename="Include/Associacao/AssociacaoHistoriaPlano.h" />
+		<Unit filename="Include/Associacao/AssociacaoHistoriaProjeto.h" />
+		<Unit filename="Include/Associacao/AssociacaoPlanoProjeto.h" />
+		<Unit filename="Include/Associacao/AssociacaoProjetoPessoa.h" />
+		<Unit filename="Include/Dominio/Codigo.h" />
+		<Unit filename="Include/Dominio/Data.h" />
+		<Unit filename="Include/Dominio/Email.h" />
+		<Unit filename="Include/Dominio/Estado.h" />
+		<Unit filename="Include/Dominio/Nome.h" />
+		<Unit filename="Include/Dominio/Papel.h" />
+		<Unit filename="Include/Dominio/Prioridade.h" />
+		<Unit filename="Include/Dominio/Senha.h" />
+		<Unit filename="Include/Dominio/Tempo.h" />
+		<Unit filename="Include/Dominio/Texto.h" />
+		<Unit filename="Include/Entidade/HistoriaUsuario.h" />
+		<Unit filename="Include/Entidade/Pessoa.h" />
+		<Unit filename="Include/Entidade/PlanoDeSprint.h" />
+		<Unit filename="Include/Entidade/Projeto.h" />
+		<Unit filename="Include/Interface/IServicoHistoriaUsuario.h" />
+		<Unit filename="Include/Interface/IServicoPessoa.h" />
+		<Unit filename="Include/Interface/IServicoPlanoDeSprint.h" />
+		<Unit filename="Include/Interface/IServicoProjeto.h" />
+		<Unit filename="Include/Servico/ContainerAssociacaoHistoriaPessoa.h" />
+		<Unit filename="Include/Servico/ContainerAssociacaoHistoriaPlano.h" />
+		<Unit filename="Include/Servico/ContainerAssociacaoHistoriaProjeto.h" />
+		<Unit filename="Include/Servico/ContainerAssociacaoPlanoProjeto.h" />
+		<Unit filename="Include/Servico/ContainerAssociacaoProjetoPessoa.h" />
+		<Unit filename="Include/Servico/ContainerHistoriasUsuario.h" />
+		<Unit filename="Include/Servico/ContainerPessoas.h" />
+		<Unit filename="Include/Servico/ContainerPlanosDeSprint.h" />
+		<Unit filename="Include/Servico/ContainerProjetos.h" />
+		<Unit filename="Include/Servico/ServicoAutenticacao.h" />
+		<Unit filename="Include/Servico/ServicoHistoriaUsuario.h" />
+		<Unit filename="Include/Servico/ServicoPessoa.h" />
+		<Unit filename="Include/Servico/ServicoPlanoDeSprint.h" />
+		<Unit filename="Include/Servico/ServicoProjeto.h" />
+		<Unit filename="Include/Servico/UtilData.h" />
+		<Unit filename="Src/Associacao/AssociacaoHistoriaPessoa.cpp" />
+		<Unit filename="Src/Associacao/AssociacaoHistoriaPlano.cpp" />
+		<Unit filename="Src/Associacao/AssociacaoHistoriaProjeto.cpp" />
+		<Unit filename="Src/Associacao/AssociacaoPlanoProjeto.cpp" />
+		<Unit filename="Src/Associacao/AssociacaoProjetoPessoa.cpp" />
+		<Unit filename="Src/Dominio/Codigo.cpp" />
+		<Unit filename="Src/Dominio/Data.cpp" />
+		<Unit filename="Src/Dominio/Email.cpp" />
+		<Unit filename="Src/Dominio/Estado.cpp" />
+		<Unit filename="Src/Dominio/Nome.cpp" />
+		<Unit filename="Src/Dominio/Papel.cpp" />
+		<Unit filename="Src/Dominio/Prioridade.cpp" />
+		<Unit filename="Src/Dominio/Senha.cpp" />
+		<Unit filename="Src/Dominio/Tempo.cpp" />
+		<Unit filename="Src/Dominio/Texto.cpp" />
+		<Unit filename="Src/Entidade/HistoriaUsuario.cpp" />
+		<Unit filename="Src/Entidade/Pessoa.cpp" />
+		<Unit filename="Src/Entidade/PlanoDeSprint.cpp" />
+		<Unit filename="Src/Entidade/Projeto.cpp" />
+		<Unit filename="Src/Servico/ContainerAssociacaoHistoriaPessoa.cpp" />
+		<Unit filename="Src/Servico/ContainerAssociacaoHistoriaPlano.cpp" />
+		<Unit filename="Src/Servico/ContainerAssociacaoHistoriaProjeto.cpp" />
+		<Unit filename="Src/Servico/ContainerAssociacaoPlanoProjeto.cpp" />
+		<Unit filename="Src/Servico/ContainerAssociacaoProjetoPessoa.cpp" />
+		<Unit filename="Src/Servico/ContainerHistoriasUsuario.cpp" />
+		<Unit filename="Src/Servico/ContainerPessoas.cpp" />
+		<Unit filename="Src/Servico/ContainerPlanosDeSprint.cpp" />
+		<Unit filename="Src/Servico/ContainerProjetos.cpp" />
+		<Unit filename="Src/Servico/ServicoAutenticacao.cpp" />
+		<Unit filename="Src/Servico/ServicoHistoriaUsuario.cpp" />
+		<Unit filename="Src/Servico/ServicoPessoa.cpp" />
+		<Unit filename="Src/Servico/ServicoPlanoDeSprint.cpp" />
+		<Unit filename="Src/Servico/ServicoProjeto.cpp" />
+		<Unit filename="Src/Servico/UtilData.cpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

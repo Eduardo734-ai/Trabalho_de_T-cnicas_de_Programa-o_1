@@ -1,0 +1,414 @@
+# depslib dependency file v1.0
+1775172186 source:c:\users\eduardo\desktop\tp1\projeto_tp1\estado.cpp
+	"Estado.h"
+	<stdexcept>
+
+1775171644 c:\users\eduardo\desktop\tp1\projeto_tp1\estado.h
+	<string>
+
+1775172209 source:c:\users\eduardo\desktop\tp1\projeto_tp1\papel.cpp
+	"Papel.h"
+	<stdexcept>
+
+1775171630 c:\users\eduardo\desktop\tp1\projeto_tp1\papel.h
+	<string>
+
+1775172236 source:c:\users\eduardo\desktop\tp1\projeto_tp1\prioridade.cpp
+	"Prioridade.h"
+	<stdexcept>
+
+1775171750 c:\users\eduardo\desktop\tp1\projeto_tp1\prioridade.h
+	<string>
+
+1775172246 source:c:\users\eduardo\desktop\tp1\projeto_tp1\tempo.cpp
+	"Tempo.h"
+	<stdexcept>
+
+1775171807 c:\users\eduardo\desktop\tp1\projeto_tp1\tempo.h
+
+1777376936 source:c:\users\eduardo\desktop\tp1\projeto_tp1\main.cpp
+	"include/apresentacao/ControladoraSistema.h"
+
+1775172395 c:\users\eduardo\desktop\tp1\projeto_tp1\codigo.h
+	<string>
+
+1775172437 source:c:\users\eduardo\desktop\tp1\projeto_tp1\codigo.cpp
+	"Codigo.h"
+	<stdexcept>
+	<cctype>
+
+1775174742 source:c:\users\eduardo\desktop\tp1\projeto_tp1\nome.cpp
+	"Nome.h"
+	<stdexcept>
+	<cctype>
+
+1775172798 c:\users\eduardo\desktop\tp1\projeto_tp1\nome.h
+	<string>
+
+1775175600 source:c:\users\eduardo\desktop\tp1\projeto_tp1\texto.cpp
+	"Texto.h"
+	<stdexcept>
+	<cctype>
+
+1775173477 c:\users\eduardo\desktop\tp1\projeto_tp1\texto.h
+	<string>
+
+1775175890 c:\users\eduardo\desktop\tp1\projeto_tp1\senha.h
+	<string>
+
+1775176714 c:\users\eduardo\desktop\tp1\projeto_tp1\data.h
+	<string>
+
+1775177951 c:\users\eduardo\desktop\tp1\projeto_tp1\email.h
+	<string>
+
+1775182728 source:c:\users\eduardo\desktop\tp1\projeto_tp1\data.cpp
+	"Data.h"
+	<stdexcept>
+	<cctype>
+
+1775182962 source:c:\users\eduardo\desktop\tp1\projeto_tp1\email.cpp
+	"Email.h"
+	<stdexcept>
+	<cctype>
+
+1775183015 source:c:\users\eduardo\desktop\tp1\projeto_tp1\senha.cpp
+	"Senha.h"
+	<stdexcept>
+	<cctype>
+
+1777379521 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\senha.h
+	<string>
+
+1775176714 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\data.h
+	<string>
+
+1775177951 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\email.h
+	<string>
+
+1775184839 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\codigo.cpp
+	"dominio/Codigo.h"
+	<stdexcept>
+	<cctype>
+
+1777379482 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\codigo.h
+	<string>
+
+1775184854 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\data.cpp
+	"dominio/Data.h"
+	<stdexcept>
+	<cctype>
+
+1775184859 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\email.cpp
+	"dominio/Email.h"
+	<stdexcept>
+	<cctype>
+
+1775184864 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\estado.cpp
+	"dominio/Estado.h"
+	<stdexcept>
+
+1775171644 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\estado.h
+	<string>
+
+1775184869 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\nome.cpp
+	"dominio/Nome.h"
+	<stdexcept>
+	<cctype>
+
+1775172798 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\nome.h
+	<string>
+
+1777376368 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\papel.cpp
+	"dominio/Papel.h"
+	<stdexcept>
+
+1775171630 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\papel.h
+	<string>
+
+1775184878 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\prioridade.cpp
+	"dominio/Prioridade.h"
+	<stdexcept>
+
+1777379513 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\prioridade.h
+	<string>
+
+1775184882 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\senha.cpp
+	"dominio/Senha.h"
+	<stdexcept>
+	<cctype>
+
+1775184887 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\tempo.cpp
+	"dominio/Tempo.h"
+	<stdexcept>
+
+1775171807 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\tempo.h
+
+1775184895 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\dominio\texto.cpp
+	"dominio/Texto.h"
+	<stdexcept>
+	<cctype>
+
+1775173477 c:\users\eduardo\desktop\tp1\projeto_tp1\include\dominio\texto.h
+	<string>
+
+1777379551 c:\users\eduardo\desktop\tp1\projeto_tp1\include\entidade\pessoa.h
+	"dominio/Email.h"
+	"dominio/Nome.h"
+	"dominio/Senha.h"
+	"dominio/Papel.h"
+
+1775453940 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\entidade\historiausuario.cpp
+	"entidade/HistoriaUsuario.h"
+
+1775233126 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\entidade\planodesprint.cpp
+	"entidade/PlanoDeSprint.h"
+
+1775231143 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\entidade\projeto.cpp
+	"entidade/Projeto.h"
+
+1775229402 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\entidade\pessoa.cpp
+	"Entidade/Pessoa.h"
+
+1777379568 c:\users\eduardo\desktop\tp1\projeto_tp1\include\entidade\projeto.h
+	"dominio/Codigo.h"
+	"dominio/Nome.h"
+	"dominio/Data.h"
+
+1777379560 c:\users\eduardo\desktop\tp1\projeto_tp1\include\entidade\planodesprint.h
+	"dominio/Codigo.h"
+	"dominio/Nome.h"
+	"dominio/Data.h"
+	"dominio/Tempo.h"
+
+1777379542 c:\users\eduardo\desktop\tp1\projeto_tp1\include\entidade\historiausuario.h
+	"dominio/Codigo.h"
+	"dominio/Nome.h"
+	"dominio/Papel.h"
+	"dominio/Texto.h"
+	"dominio/Tempo.h"
+	"dominio/Prioridade.h"
+	"dominio/Estado.h"
+
+1777379583 c:\users\eduardo\desktop\tp1\projeto_tp1\include\interface\iservicopessoa.h
+	"entidade/Pessoa.h"
+	"dominio/Email.h"
+
+1777379602 c:\users\eduardo\desktop\tp1\projeto_tp1\include\interface\iservicoprojeto.h
+	<vector>
+	"entidade/Projeto.h"
+	"entidade/HistoriaUsuario.h"
+	"entidade/PlanoDeSprint.h"
+	"dominio/Codigo.h"
+	"dominio/Email.h"
+
+1777379591 c:\users\eduardo\desktop\tp1\projeto_tp1\include\interface\iservicoplanodesprint.h
+	<vector>
+	"entidade/PlanoDeSprint.h"
+	"entidade/HistoriaUsuario.h"
+	"dominio/Codigo.h"
+
+1775251138 c:\users\eduardo\desktop\tp1\projeto_tp1\include\interface\iservicohistoriausuario.h
+	<vector>
+	"entidade/HistoriaUsuario.h"
+	"dominio/Codigo.h"
+	"dominio/Email.h"
+	"dominio/Estado.h"
+
+1777314595 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\servicohistoriausuario.cpp
+	"../../include/servico/ServicoHistoriaUsuario.h"
+	"../../include/associacao/AssociacaoHistoriaPessoa.h"
+	"../../include/associacao/AssociacaoHistoriaPlano.h"
+	<stdexcept>
+
+1775450587 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\servicopessoa.cpp
+	"../../include/servico/ServicoPessoa.h"
+	<stdexcept>
+
+1776654164 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\servicoplanodesprint.cpp
+	"../../include/servico/ServicoPlanoDeSprint.h"
+	"../../include/associacao/AssociacaoHistoriaPlano.h"
+	<stdexcept>
+
+1777314435 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\servicoprojeto.cpp
+	"../../include/servico/ServicoProjeto.h"
+	"../../include/servico/UtilData.h"
+	"../../include/associacao/AssociacaoProjetoPessoa.h"
+	"../../include/associacao/AssociacaoHistoriaProjeto.h"
+	"../../include/associacao/AssociacaoPlanoProjeto.h"
+	"../../include/dominio/Estado.h"
+	<stdexcept>
+
+1775445550 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerhistoriasusuario.cpp
+	"../../include/servico/ContainerHistoriasUsuario.h"
+	<stdexcept>
+
+1775444979 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerhistoriasusuario.h
+	<vector>
+	"entidade/HistoriaUsuario.h"
+	"Dominio/Codigo.h"
+
+1775446329 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerpessoas.cpp
+	"../../include/servico/ContainerPessoas.h"
+	<stdexcept>
+
+1777379676 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerpessoas.h
+	<vector>
+	"entidade/Pessoa.h"
+	"dominio/Email.h"
+
+1775444819 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerplanosdesprint.cpp
+	"../../include/servico/ContainerPlanosDeSprint.h"
+	<stdexcept>
+
+1777379684 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerplanosdesprint.h
+	<vector>
+	<entidade/PlanoDeSprint.h>
+	<dominio/Codigo.h>
+
+1777379692 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerprojetos.h
+	<vector>
+	"entidade/Projeto.h"
+	"dominio/Codigo.h"
+
+1775446576 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerprojetos.cpp
+	"../../include/servico/ContainerProjetos.h"
+	<stdexcept>
+
+1777314408 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\servicoprojeto.h
+	<vector>
+	"../interface/IServicoProjeto.h"
+	"../entidade/Pessoa.h"
+	"ContainerProjetos.h"
+	"ContainerHistoriasUsuario.h"
+	"ContainerPlanosDeSprint.h"
+	"ContainerAssociacaoProjetoPessoa.h"
+	"ContainerAssociacaoHistoriaProjeto.h"
+	"ContainerAssociacaoPlanoProjeto.h"
+
+1777314513 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\servicohistoriausuario.h
+	<vector>
+	"../interface/IServicoHistoriaUsuario.h"
+	"ContainerHistoriasUsuario.h"
+	"ContainerPlanosDeSprint.h"
+	"ContainerAssociacaoHistoriaPessoa.h"
+	"ContainerAssociacaoHistoriaPlano.h"
+
+1775451031 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\servicopessoa.h
+	"../interface/IservicoPessoa.h"
+	"ContainerPessoas.h"
+
+1777379719 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\servicoplanodesprint.h
+	<vector>
+	"../interface/IServicoPlanoDeSprint.h"
+	"ContainerPlanosDeSprint.h"
+	"ContainerHistoriasUsuario.h"
+	"ContainerAssociacaoHistoriaPlano.h"
+
+1775500951 c:\users\eduardo\desktop\tp1\projeto_tp1\include\associacao\associacaoprojetopessoa.h
+	"dominio/Codigo.h"
+	"dominio/Email.h"
+
+1776560811 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\associacao\associacaohistoriaplano.cpp
+	"associacao/AssociacaoHistoriaPlano.h"
+
+1776560540 c:\users\eduardo\desktop\tp1\projeto_tp1\include\associacao\associacaohistoriaplano.h
+	"dominio/Codigo.h"
+
+1776560883 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\associacao\associacaohistoriapessoa.cpp
+	"associacao/AssociacaoHistoriaPessoa.h"
+
+1776560091 c:\users\eduardo\desktop\tp1\projeto_tp1\include\associacao\associacaohistoriapessoa.h
+	"dominio/Codigo.h"
+	"dominio/Email.h"
+
+1776559764 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\associacao\associacaoplanoprojeto.cpp
+	"associacao/AssociacaoPlanoProjeto.h"
+
+1776559532 c:\users\eduardo\desktop\tp1\projeto_tp1\include\associacao\associacaoplanoprojeto.h
+	"dominio/Codigo.h"
+
+1776559300 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\associacao\associacaohistoriaprojeto.cpp
+	"associacao/associacaoHistoriaProjeto.h"
+
+1776560891 c:\users\eduardo\desktop\tp1\projeto_tp1\include\associacao\associacaohistoriaprojeto.h
+	"dominio/Codigo.h"
+
+1776560942 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\associacao\associacaoprojetopessoa.cpp
+	"associacao/AssociacaoProjetoPessoa.h"
+
+1776561938 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerassociacaoprojetopessoa.h
+	<vector>
+	"../associacao/AssociacaoProjetoPessoa.h"
+
+1776570799 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerassociacaohistoriaplano.cpp
+	"../../include/servico/ContainerAssociacaoHistoriaPlano.h"
+	<stdexcept>
+
+1776570907 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerassociacaohistoriaplano.h
+	<vector>
+	"../associacao/AssociacaoHistoriaPlano.h"
+
+1776570952 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerassociacaohistoriapessoa.cpp
+	"../../include/servico/ContainerAssociacaoHistoriaPessoa.h"
+	<stdexcept>
+
+1776570984 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerassociacaohistoriapessoa.h
+	<vector>
+	"../associacao/AssociacaoHistoriaPessoa.h"
+
+1776571098 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerassociacaohistoriaprojeto.cpp
+	"../../include/servico/ContainerAssociacaoHistoriaProjeto.h"
+	<stdexcept>
+
+1776571050 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerassociacaohistoriaprojeto.h
+	<vector>
+	"../associacao/AssociacaoHistoriaProjeto.h"
+
+1776571153 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerassociacaoplanoprojeto.cpp
+	"../../include/servico/ContainerAssociacaoPlanoProjeto.h"
+	<stdexcept>
+
+1776569233 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\containerassociacaoplanoprojeto.h
+	<vector>
+	"../associacao/AssociacaoPlanoProjeto.h"
+
+1776571176 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\containerassociacaoprojetopessoa.cpp
+	"../../include/servico/ContainerAssociacaoProjetoPessoa.h"
+	<stdexcept>
+
+1777291174 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\utildata.h
+	"../dominio/Data.h"
+
+1777291004 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\utildata.cpp
+	"../../include/servico/UtilData.h"
+	<stdexcept>
+
+1777377090 c:\users\eduardo\desktop\tp1\projeto_tp1\include\servico\servicoautenticacao.h
+	"../entidade/Pessoa.h"
+	"../dominio/Email.h"
+	"../dominio/Senha.h"
+	"ContainerPessoas.h"
+
+1777315697 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\servicoassociacao.cpp
+	"../../include/servico/ServicoAutenticacao.h"
+	<stdexcept>
+
+1777375880 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\servico\servicoautenticacao.cpp
+	"../../include/servico/ServicoAutenticacao.h"
+	<stdexcept>
+
+1777377523 c:\users\eduardo\desktop\tp1\projeto_tp1\include\apresentacao\controladorasistema.h
+	"../servico/ServicoAutenticacao.h"
+	"../servico/ServicoPessoa.h"
+	"../servico/ServicoProjeto.h"
+	"../servico/ServicoPlanoDeSprint.h"
+	"../servico/ServicoHistoriaUsuario.h"
+
+1777378627 source:c:\users\eduardo\desktop\tp1\projeto_tp1\src\apresentacao\controladorasistema.cpp
+	"../../include/apresentacao/ControladoraSistema.h"
+	<iostream>
+	<stdexcept>
+	<vector>
+	<limits>
+
