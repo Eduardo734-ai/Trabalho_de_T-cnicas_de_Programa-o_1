@@ -124,7 +124,7 @@ O sistema implementa validações importantes, como:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/NOME_REPO.git
+git clone [https://github.com/Eduardo734-ai/Trabalho_de_T-cnicas_de_Programa-o_1.git]
 ```
 
 2. Abra o projeto no Code::Blocks
