@@ -1,8 +1,0 @@
-*.o
-*.exe
-*.layout
-*.depend
-*.cbp
-bin/
-obj/
-sqlite/teste.db

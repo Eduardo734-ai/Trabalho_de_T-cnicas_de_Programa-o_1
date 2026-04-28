@@ -1,0 +1,10 @@
+bin/
+obj/
+*.exe
+*.o
+*.layout
+*.depend
+*.db
+*.dll
+.vscode/
+*.cbp
