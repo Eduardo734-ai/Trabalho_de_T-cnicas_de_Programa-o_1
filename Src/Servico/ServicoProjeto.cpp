@@ -1,69 +1,71 @@
-#include"../../include/servico/ServicoProjeto.h"
-#include"../../include/servico/UtilData.h"
+#include "../../include/servico/ServicoProjeto.h"
+#include "../../include/servico/UtilData.h"
 
-#include"../../include/associacao/AssociacaoProjetoPessoa.h"
-#include"../../include/associacao/AssociacaoHistoriaProjeto.h"
-#include"../../include/associacao/AssociacaoPlanoProjeto.h"
+#include "../../include/associacao/AssociacaoProjetoPessoa.h"
+#include "../../include/associacao/AssociacaoHistoriaProjeto.h"
+#include "../../include/associacao/AssociacaoPlanoProjeto.h"
 
-#include"../../include/dominio/Estado.h"
+#include "../../include/dominio/Estado.h"
 
-#include<stdexcept>
+#include <stdexcept>
 
 using namespace std;
 
-ServicoProjeto::ServicoProjeto(){
+ServicoProjeto::ServicoProjeto() {
 }
 
-void ServicoProjeto::criar(const Projeto &projeto){
-    container.inserir(projeto);
+void ServicoProjeto::criar(const Projeto &projeto) {
+    repositorioProjeto.inserir(projeto);
 }
 
-Projeto ServicoProjeto::ler(const Codigo &codigo){
-    return container.buscar(codigo);
+Projeto ServicoProjeto::ler(const Codigo &codigo) {
+    return repositorioProjeto.buscar(codigo);
 }
 
-void ServicoProjeto::atualizar(const Projeto &projeto){
-    container.remover(projeto.getCodigo());
-    container.inserir(projeto);
+void ServicoProjeto::atualizar(const Projeto &projeto) {
+    repositorioProjeto.atualizar(projeto);
 }
 
-void ServicoProjeto::excluir(const Codigo &codigo){
+void ServicoProjeto::excluir(const Codigo &codigo) {
     vector<AssociacaoProjetoPessoa> associacoesPessoa;
     vector<AssociacaoHistoriaProjeto> associacoesHistoria;
     vector<AssociacaoPlanoProjeto> associacoesPlano;
     int i;
 
-    associacoesPessoa = associacoesProjetoPessoa.listar();
+    associacoesPessoa = repositorioAssociacaoProjetoPessoa.listar();
 
-    for(i = 0; i < (int)associacoesPessoa.size(); i++){
-        if(associacoesPessoa[i].getCodigoProjeto().getValor() == codigo.getValor()){
+    for (i = 0; i < (int)associacoesPessoa.size(); i++) {
+        if (associacoesPessoa[i].getCodigoProjeto().getValor() == codigo.getValor()) {
             throw invalid_argument("Nao e possivel excluir projeto associado a pessoa.");
         }
     }
 
-    associacoesHistoria = associacoesHistoriaProjeto.listar();
+    associacoesHistoria = repositorioAssociacaoHistoriaProjeto.listar();
 
-    for(i = 0; i < (int)associacoesHistoria.size(); i++){
-        if(associacoesHistoria[i].getCodigoProjeto().getValor() == codigo.getValor()){
+    for (i = 0; i < (int)associacoesHistoria.size(); i++) {
+        if (associacoesHistoria[i].getCodigoProjeto().getValor() == codigo.getValor()) {
             throw invalid_argument("Nao e possivel excluir projeto com historias associadas.");
         }
     }
 
-    associacoesPlano = associacoesPlanoProjeto.listar();
+    associacoesPlano = repositorioAssociacaoPlanoProjeto.listar();
 
-    for(i = 0; i < (int)associacoesPlano.size(); i++){
-        if(associacoesPlano[i].getCodigoProjeto().getValor() == codigo.getValor()){
+    for (i = 0; i < (int)associacoesPlano.size(); i++) {
+        if (associacoesPlano[i].getCodigoProjeto().getValor() == codigo.getValor()) {
             throw invalid_argument("Nao e possivel excluir projeto com planos associados.");
         }
     }
 
-    container.remover(codigo);
+    repositorioProjeto.remover(codigo);
 }
 
-void ServicoProjeto::atualizarDadosProjeto(const Codigo &codigo, const Nome &nome, const Data &inicio, const Data &termino){
+void ServicoProjeto::atualizarDadosProjeto(const Codigo &codigo,
+                                           const Nome &nome,
+                                           const Data &inicio,
+                                           const Data &termino) {
     Projeto projeto;
 
-    projeto = container.buscar(codigo);
+    projeto = repositorioProjeto.buscar(codigo);
 
     projeto.setNome(nome);
     projeto.setDataInicio(inicio);
@@ -72,70 +74,69 @@ void ServicoProjeto::atualizarDadosProjeto(const Codigo &codigo, const Nome &nom
     atualizar(projeto);
 }
 
-void ServicoProjeto::registrarHistoria(const HistoriaUsuario &historia){
+void ServicoProjeto::registrarHistoria(const HistoriaUsuario &historia) {
     containerHistorias.inserir(historia);
 }
 
-void ServicoProjeto::registrarPlano(const PlanoDeSprint &plano){
+void ServicoProjeto::registrarPlano(const PlanoDeSprint &plano) {
     containerPlanos.inserir(plano);
 }
 
-void ServicoProjeto::associarProjetoPessoa(const Codigo &codigoProjeto,const Email &emailPessoa){
+void ServicoProjeto::associarProjetoPessoa(const Codigo &codigoProjeto, const Email &emailPessoa) {
     AssociacaoProjetoPessoa associacao;
 
-    container.buscar(codigoProjeto);
+    repositorioProjeto.buscar(codigoProjeto);
 
     associacao.setCodigoProjeto(codigoProjeto);
     associacao.setEmailPessoa(emailPessoa);
 
-    associacoesProjetoPessoa.inserir(associacao);
+    repositorioAssociacaoProjetoPessoa.inserir(associacao);
 }
 
-void ServicoProjeto::associarHistoriaProjeto(const Codigo &codigoHistoria,const Codigo &codigoProjeto){
+void ServicoProjeto::associarHistoriaProjeto(const Codigo &codigoHistoria, const Codigo &codigoProjeto) {
     AssociacaoHistoriaProjeto associacao;
 
-    container.buscar(codigoProjeto);
-
+    repositorioProjeto.buscar(codigoProjeto);
     containerHistorias.buscar(codigoHistoria);
 
     associacao.setCodigoHistoria(codigoHistoria);
     associacao.setCodigoProjeto(codigoProjeto);
 
-    associacoesHistoriaProjeto.inserir(associacao);
+    repositorioAssociacaoHistoriaProjeto.inserir(associacao);
 }
 
-void ServicoProjeto::associarPlanoProjeto(const Codigo &codigoPlano,const Codigo &codigoProjeto){
+void ServicoProjeto::associarPlanoProjeto(const Codigo &codigoPlano, const Codigo &codigoProjeto) {
     AssociacaoPlanoProjeto associacao;
 
-    container.buscar(codigoProjeto);
-
+    repositorioProjeto.buscar(codigoProjeto);
     containerPlanos.buscar(codigoPlano);
 
     associacao.setCodigoPlano(codigoPlano);
     associacao.setCodigoProjeto(codigoProjeto);
 
-    associacoesPlanoProjeto.inserir(associacao);
+    repositorioAssociacaoPlanoProjeto.inserir(associacao);
 }
 
-void ServicoProjeto::criarAssociadoPessoa(const Projeto &projeto,const Pessoa &pessoa){
-    if(pessoa.getPapel().getValor() != "MESTRE SCRUM"){
-        throw invalid_argument("Projeto deve ser associado a um mestre Scrum.");
+void ServicoProjeto::criarAssociadoPessoa(const Projeto &projeto, const Pessoa &pessoa) {
+    if (pessoa.getPapel().getValor() != "MESTRE SCRUM") {
+        throw invalid_argument("Projeto deve ser associado a um Mestre Scrum.");
     }
+
     criar(projeto);
 
-    associarProjetoPessoa(projeto.getCodigo(),pessoa.getEmail());
+    associarProjetoPessoa(projeto.getCodigo(), pessoa.getEmail());
 }
 
-void ServicoProjeto::criarHistoriaAssociadaProjeto(HistoriaUsuario historia,const Codigo &codigoProjeto){
+void ServicoProjeto::criarHistoriaAssociadaProjeto(HistoriaUsuario historia, const Codigo &codigoProjeto) {
     Estado estadoInicial;
 
-    container.buscar(codigoProjeto);
+    repositorioProjeto.buscar(codigoProjeto);
 
     estadoInicial.setValor("A FAZER");
     historia.setEstado(estadoInicial);
 
     registrarHistoria(historia);
-    associarHistoriaProjeto(historia.getCodigo(),codigoProjeto);
+    associarHistoriaProjeto(historia.getCodigo(), codigoProjeto);
 }
 
 void ServicoProjeto::criarPlanoAssociadoProjeto(const PlanoDeSprint &plano, const Codigo &codigoProjeto) {
@@ -145,7 +146,7 @@ void ServicoProjeto::criarPlanoAssociadoProjeto(const PlanoDeSprint &plano, cons
     int somaCapacidades;
     int i;
 
-    projeto = container.buscar(codigoProjeto);
+    projeto = repositorioProjeto.buscar(codigoProjeto);
 
     duracaoProjeto = UtilData::calcularDiferencaDias(
         projeto.getDataInicio(),
@@ -173,43 +174,51 @@ void ServicoProjeto::criarPlanoAssociadoProjeto(const PlanoDeSprint &plano, cons
 vector<Projeto> ServicoProjeto::listarProjetosAssociadosPessoa(const Email &email) {
     vector<Projeto> projetos;
     vector<AssociacaoProjetoPessoa> associacoes;
+    int i;
 
-    associacoes = associacoesProjetoPessoa.listar();
+    associacoes = repositorioAssociacaoProjetoPessoa.listar();
 
-    for (int i = 0; i < (int)associacoes.size(); i++) {
+    for (i = 0; i < (int)associacoes.size(); i++) {
         if (associacoes[i].getEmailPessoa().getValor() == email.getValor()) {
-            projetos.push_back(container.buscar(associacoes[i].getCodigoProjeto()));
+            projetos.push_back(repositorioProjeto.buscar(associacoes[i].getCodigoProjeto()));
         }
     }
 
     return projetos;
 }
 
-vector<HistoriaUsuario> ServicoProjeto::listarHistoriasAssociadasProjeto(const Codigo &codigoProjeto){
+vector<HistoriaUsuario> ServicoProjeto::listarHistoriasAssociadasProjeto(const Codigo &codigoProjeto) {
     vector<HistoriaUsuario> historias;
     vector<AssociacaoHistoriaProjeto> associacoes;
     int i;
 
-    associacoes = associacoesHistoriaProjeto.listar();
+    repositorioProjeto.buscar(codigoProjeto);
 
-    for (i=0;i<(int)associacoes.size();i++) {
+    associacoes = repositorioAssociacaoHistoriaProjeto.listar();
+
+    for (i = 0; i < (int)associacoes.size(); i++) {
         if (associacoes[i].getCodigoProjeto().getValor() == codigoProjeto.getValor()) {
-            historias.push_back(containerHistorias.buscar(associacoes[i].getCodigoHistoria()));
+            historias.push_back(repositorioHistoria.buscar(associacoes[i].getCodigoHistoria()));
         }
     }
+
     return historias;
 }
 
-vector<PlanoDeSprint> ServicoProjeto::listarPlanosAssociadosProjeto(const Codigo &codigoProjeto){
+vector<PlanoDeSprint> ServicoProjeto::listarPlanosAssociadosProjeto(const Codigo &codigoProjeto) {
     vector<PlanoDeSprint> planos;
     vector<AssociacaoPlanoProjeto> associacoes;
     int i;
 
-    associacoes = associacoesPlanoProjeto.listar();
+    repositorioProjeto.buscar(codigoProjeto);
+
+    associacoes = repositorioAssociacaoPlanoProjeto.listar();
+
     for (i = 0; i < (int)associacoes.size(); i++) {
         if (associacoes[i].getCodigoProjeto().getValor() == codigoProjeto.getValor()) {
-            planos.push_back(containerPlanos.buscar(associacoes[i].getCodigoPlano()));
+            planos.push_back(repositorioPlano.buscar(associacoes[i].getCodigoPlano()));
         }
     }
+
     return planos;
 }

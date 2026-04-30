@@ -44,7 +44,10 @@
 		<Unit filename="Include/Associacao/AssociacaoPlanoProjeto.h" />
 		<Unit filename="Include/Associacao/AssociacaoProjetoPessoa.h" />
 		<Unit filename="Include/Banco/BancoDados.h" />
+		<Unit filename="Include/Banco/RepositorioHistoriaUsuario.h" />
 		<Unit filename="Include/Banco/RepositorioPessoa.h" />
+		<Unit filename="Include/Banco/RepositorioPlanoDeSprint.h" />
+		<Unit filename="Include/Banco/RepositorioProjeto.h" />
 		<Unit filename="Include/Dominio/Codigo.h" />
 		<Unit filename="Include/Dominio/Data.h" />
 		<Unit filename="Include/Dominio/Email.h" />
@@ -85,7 +88,10 @@
 		<Unit filename="Src/Associacao/AssociacaoPlanoProjeto.cpp" />
 		<Unit filename="Src/Associacao/AssociacaoProjetoPessoa.cpp" />
 		<Unit filename="Src/Banco/BancoDados.cpp" />
+		<Unit filename="Src/Banco/RepositorioHistoriaUsuario.cpp" />
 		<Unit filename="Src/Banco/RepositorioPessoa.cpp" />
+		<Unit filename="Src/Banco/RepositorioPlanoDeSprint.cpp" />
+		<Unit filename="Src/Banco/RepositorioProjeto.cpp" />
 		<Unit filename="Src/Dominio/Codigo.cpp" />
 		<Unit filename="Src/Dominio/Data.cpp" />
 		<Unit filename="Src/Dominio/Email.cpp" />

@@ -2,6 +2,7 @@
 #define REPOSITORIOPESSOA_H_INCLUDED
 
 #include "../entidade/Pessoa.h"
+#include "../dominio/Email.h"
 #include "BancoDados.h"
 
 class RepositorioPessoa {
@@ -13,6 +14,8 @@ public:
 
     void inserir(const Pessoa &pessoa);
     Pessoa buscar(const Email &email);
+    void atualizar(const Pessoa &pessoa);
+    void remover(const Email &email);
 };
 
 #endif // REPOSITORIOPESSOA_H_INCLUDED

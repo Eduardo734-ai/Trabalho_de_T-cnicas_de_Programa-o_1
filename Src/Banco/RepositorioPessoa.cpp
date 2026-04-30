@@ -51,3 +51,52 @@ Pessoa RepositorioPessoa::buscar(const Email &email) {
 
     return pessoa;
 }
+
+void RepositorioPessoa::atualizar(const Pessoa &pessoa) {
+    sqlite3_stmt *stmt;
+    string sql;
+    int resultado;
+
+    sql = "UPDATE pessoa SET nome = ?, senha = ?, papel = ? WHERE email = ?;";
+
+    resultado = sqlite3_prepare_v2(banco.getDB(), sql.c_str(), -1, &stmt, nullptr);
+
+    if (resultado != SQLITE_OK) {
+        throw invalid_argument("Erro ao preparar atualizacao de pessoa.");
+    }
+
+    sqlite3_bind_text(stmt, 1, pessoa.getNome().getValor().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, pessoa.getSenha().getValor().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 3, pessoa.getPapel().getValor().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 4, pessoa.getEmail().getValor().c_str(), -1, SQLITE_TRANSIENT);
+
+    resultado = sqlite3_step(stmt);
+    sqlite3_finalize(stmt);
+
+    if (resultado != SQLITE_DONE) {
+        throw invalid_argument("Erro ao atualizar pessoa.");
+    }
+}
+
+void RepositorioPessoa::remover(const Email &email) {
+    sqlite3_stmt *stmt;
+    string sql;
+    int resultado;
+
+    sql = "DELETE FROM pessoa WHERE email = ?;";
+
+    resultado = sqlite3_prepare_v2(banco.getDB(), sql.c_str(), -1, &stmt, nullptr);
+
+    if (resultado != SQLITE_OK) {
+        throw invalid_argument("Erro ao preparar remocao de pessoa.");
+    }
+
+    sqlite3_bind_text(stmt, 1, email.getValor().c_str(), -1, SQLITE_TRANSIENT);
+
+    resultado = sqlite3_step(stmt);
+    sqlite3_finalize(stmt);
+
+    if (resultado != SQLITE_DONE) {
+        throw invalid_argument("Erro ao remover pessoa.");
+    }
+}

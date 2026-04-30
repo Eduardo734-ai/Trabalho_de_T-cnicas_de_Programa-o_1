@@ -1,30 +1,34 @@
 #ifndef SERVICOPLANODESPRINT_H_INCLUDED
 #define SERVICOPLANODESPRINT_H_INCLUDED
 
-#include<vector>
+#include <vector>
 
-#include"../interface/IServicoPlanoDeSprint.h"
-#include"ContainerPlanosDeSprint.h"
-#include"ContainerHistoriasUsuario.h"
-#include"ContainerAssociacaoHistoriaPlano.h"
+#include "../interface/IServicoPlanoDeSprint.h"
 
-class ServicoPlanoDeSprint : public IServicoPlanoDeSprint{
-    private:
-        ContainerPlanosDeSprint container;
-        ContainerHistoriasUsuario containerHistorias;
-        ContainerAssociacaoHistoriaPlano associacoesHistoriaPlano;
-    public:
-        ServicoPlanoDeSprint();
+#include "../banco/RepositorioPlanoDeSprint.h"
+#include "../banco/RepositorioAssociacaoHistoriaPlano.h"
 
-        void criar(const PlanoDeSprint &plano)override;
-        PlanoDeSprint ler(const Codigo &codigo)override;
-        void atualizar(const PlanoDeSprint &plano)override;
-        void excluir(const Codigo &codigo)override;
+#include "ContainerHistoriasUsuario.h"
 
-        std::vector<HistoriaUsuario> listarHistoriasAssociadasPlano(const Codigo &codigoPlano)override;
+class ServicoPlanoDeSprint : public IServicoPlanoDeSprint {
+private:
+    RepositorioPlanoDeSprint repositorioPlano;
+    RepositorioAssociacaoHistoriaPlano repositorioAssociacaoHistoriaPlano;
 
-        void registrarHistoria(const HistoriaUsuario &historia);
-        void associarHistoriaPlano(const Codigo &codigoHistoria, const Codigo &codigoPlano);
+    ContainerHistoriasUsuario containerHistorias;
+
+public:
+    ServicoPlanoDeSprint();
+
+    void criar(const PlanoDeSprint &plano) override;
+    PlanoDeSprint ler(const Codigo &codigo) override;
+    void atualizar(const PlanoDeSprint &plano) override;
+    void excluir(const Codigo &codigo) override;
+
+    std::vector<HistoriaUsuario> listarHistoriasAssociadasPlano(const Codigo &codigoPlano) override;
+
+    void registrarHistoria(const HistoriaUsuario &historia);
+    void associarHistoriaPlano(const Codigo &codigoHistoria, const Codigo &codigoPlano);
 };
 
 #endif // SERVICOPLANODESPRINT_H_INCLUDED

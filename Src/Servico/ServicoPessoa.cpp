@@ -1,24 +1,20 @@
-#include"../../include/servico/ServicoPessoa.h"
-#include<stdexcept>
+#include "../../include/servico/ServicoPessoa.h"
 
-using namespace std;
-
-ServicoPessoa::ServicoPessoa(){
+ServicoPessoa::ServicoPessoa() {
 }
 
-void ServicoPessoa::criar(const Pessoa &pessoa){
-    container.inserir(pessoa);
+void ServicoPessoa::criar(const Pessoa &pessoa) {
+    repositorioPessoa.inserir(pessoa);
 }
 
-Pessoa ServicoPessoa::ler(const Email &email){
-    return container.buscar(email);
+Pessoa ServicoPessoa::ler(const Email &email) {
+    return repositorioPessoa.buscar(email);
 }
 
-void ServicoPessoa::atualizar(const Pessoa &pessoa){
-    container.remover(pessoa.getEmail());
-    container.inserir(pessoa);
+void ServicoPessoa::atualizar(const Pessoa &pessoa) {
+    repositorioPessoa.atualizar(pessoa);
 }
 
-void ServicoPessoa::excluir(const Email &email){
-    container.remover(email);
+void ServicoPessoa::excluir(const Email &email) {
+    repositorioPessoa.remover(email);
 }

@@ -1,43 +1,53 @@
 #ifndef SERVICOHISTORIAUSUARIO_H_INCLUDED
 #define SERVICOHISTORIAUSUARIO_H_INCLUDED
 
-#include<vector>
+#include <vector>
 
-#include"../interface/IServicoHistoriaUsuario.h"
+#include "../interface/IServicoHistoriaUsuario.h"
 
-#include"ContainerHistoriasUsuario.h"
-#include"ContainerPlanosDeSprint.h"
-#include"ContainerAssociacaoHistoriaPessoa.h"
-#include"ContainerAssociacaoHistoriaPlano.h"
+#include "../banco/RepositorioHistoriaUsuario.h"
+#include "../banco/RepositorioAssociacaoHistoriaPessoa.h"
+#include "../banco/RepositorioAssociacaoHistoriaPlano.h"
 
+#include "ContainerPlanosDeSprint.h"
 
-class ServicoHistoriaUsuario : public IServicoHistoriaUsuario{
-    private:
-        ContainerHistoriasUsuario container;
-        ContainerPlanosDeSprint containerPlanos;
+class ServicoHistoriaUsuario : public IServicoHistoriaUsuario {
+private:
+    RepositorioHistoriaUsuario repositorioHistoria;
 
-        ContainerAssociacaoHistoriaPessoa associacoesHistoriaPessoa;
-        ContainerAssociacaoHistoriaPlano associacoesHistoriaPlano;
-    public:
-        ServicoHistoriaUsuario();
+    RepositorioAssociacaoHistoriaPessoa repositorioAssociacaoHistoriaPessoa;
+    RepositorioAssociacaoHistoriaPlano repositorioAssociacaoHistoriaPlano;
 
-        void criar(const HistoriaUsuario &historia)override;
-        HistoriaUsuario ler(const Codigo &codigo)override;
-        void atualizar(const HistoriaUsuario &historia)override;
-        void excluir(const Codigo &codigo)override;
+    ContainerPlanosDeSprint containerPlanos;
 
-        void associarPessoa(const Codigo &codigoHistoria,const Email &emailPessoa)override;
-        void removerAssociacaoPessoa(const Codigo &codigoHistoria, const Email &emailPessoa)override;
-        std::vector<HistoriaUsuario> listarHistoriasAssociadasPessoa(const Email &emailPessoa)override;
+public:
+    ServicoHistoriaUsuario();
 
-        void moverParaSprint(const Codigo &codigoHistoria, const Codigo &codigoProjeto,const Codigo &codigoPlano)override;
-        void alterarEstado(const Codigo &codigoHistoria,const Estado &estado)override;
+    void criar(const HistoriaUsuario &historia) override;
+    HistoriaUsuario ler(const Codigo &codigo) override;
+    void atualizar(const HistoriaUsuario &historia) override;
+    void excluir(const Codigo &codigo) override;
 
-        void registrarPlano(const PlanoDeSprint &plano);
-        std::vector<HistoriaUsuario> listarHistoriasAssociadasPlano(const Codigo &codigoPlano);
+    void associarPessoa(const Codigo &codigoHistoria, const Email &emailPessoa) override;
+    void removerAssociacaoPessoa(const Codigo &codigoHistoria, const Email &emailPessoa) override;
+    std::vector<HistoriaUsuario> listarHistoriasAssociadasPessoa(const Email &emailPessoa) override;
 
-        void atualizarDadosHistoria(const Codigo &codigo,const Nome &nome,const Papel &papel,const Texto &acao,const Texto &valor,const Tempo &estimativa,const Prioridade &prioridade);
+    void moverParaSprint(const Codigo &codigoHistoria,
+                         const Codigo &codigoProjeto,
+                         const Codigo &codigoPlano) override;
 
+    void alterarEstado(const Codigo &codigoHistoria, const Estado &estado) override;
+
+    void registrarPlano(const PlanoDeSprint &plano);
+    std::vector<HistoriaUsuario> listarHistoriasAssociadasPlano(const Codigo &codigoPlano);
+
+    void atualizarDadosHistoria(const Codigo &codigo,
+                                const Nome &nome,
+                                const Papel &papel,
+                                const Texto &acao,
+                                const Texto &valor,
+                                const Tempo &estimativa,
+                                const Prioridade &prioridade);
 };
 
-#endif // SERVICOHISTORIAUSUARIO_H_INCLUDED
+#endif
