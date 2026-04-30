@@ -32,13 +32,19 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-D_WIN32_WINNT=0x0600" />
+			<Add option="-DWINVER=0x0600" />
 			<Add directory="Include" />
+			<Add directory="sqlite" />
 		</Compiler>
+		<Unit filename="Include/Apresentacao/ControladoraSistema.h" />
 		<Unit filename="Include/Associacao/AssociacaoHistoriaPessoa.h" />
 		<Unit filename="Include/Associacao/AssociacaoHistoriaPlano.h" />
 		<Unit filename="Include/Associacao/AssociacaoHistoriaProjeto.h" />
 		<Unit filename="Include/Associacao/AssociacaoPlanoProjeto.h" />
 		<Unit filename="Include/Associacao/AssociacaoProjetoPessoa.h" />
+		<Unit filename="Include/Banco/BancoDados.h" />
+		<Unit filename="Include/Banco/RepositorioPessoa.h" />
 		<Unit filename="Include/Dominio/Codigo.h" />
 		<Unit filename="Include/Dominio/Data.h" />
 		<Unit filename="Include/Dominio/Email.h" />
@@ -72,11 +78,14 @@
 		<Unit filename="Include/Servico/ServicoPlanoDeSprint.h" />
 		<Unit filename="Include/Servico/ServicoProjeto.h" />
 		<Unit filename="Include/Servico/UtilData.h" />
+		<Unit filename="Src/Apresentacao/ControladoraSistema.cpp" />
 		<Unit filename="Src/Associacao/AssociacaoHistoriaPessoa.cpp" />
 		<Unit filename="Src/Associacao/AssociacaoHistoriaPlano.cpp" />
 		<Unit filename="Src/Associacao/AssociacaoHistoriaProjeto.cpp" />
 		<Unit filename="Src/Associacao/AssociacaoPlanoProjeto.cpp" />
 		<Unit filename="Src/Associacao/AssociacaoProjetoPessoa.cpp" />
+		<Unit filename="Src/Banco/BancoDados.cpp" />
+		<Unit filename="Src/Banco/RepositorioPessoa.cpp" />
 		<Unit filename="Src/Dominio/Codigo.cpp" />
 		<Unit filename="Src/Dominio/Data.cpp" />
 		<Unit filename="Src/Dominio/Email.cpp" />
@@ -107,6 +116,10 @@
 		<Unit filename="Src/Servico/ServicoProjeto.cpp" />
 		<Unit filename="Src/Servico/UtilData.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="sqlite/sqlite3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sqlite/sqlite3.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

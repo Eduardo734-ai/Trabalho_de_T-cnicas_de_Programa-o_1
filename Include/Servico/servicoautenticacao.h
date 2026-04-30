@@ -4,12 +4,13 @@
 #include "../entidade/Pessoa.h"
 #include "../dominio/Email.h"
 #include "../dominio/Senha.h"
+#include "../banco/RepositorioPessoa.h"
 
 #include "ContainerPessoas.h"
 
 class ServicoAutenticacao {
 private:
-    ContainerPessoas containerPessoas;
+    RepositorioPessoa repositorio;
     Pessoa usuarioLogado;
     bool autenticado;
 

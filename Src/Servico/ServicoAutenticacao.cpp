@@ -8,13 +8,13 @@ ServicoAutenticacao::ServicoAutenticacao() {
 }
 
 void ServicoAutenticacao::cadastrar(const Pessoa &pessoa) {
-    containerPessoas.inserir(pessoa);
+    repositorio.inserir(pessoa);
 }
 
 bool ServicoAutenticacao::login(const Email &email, const Senha &senha) {
     Pessoa pessoa;
 
-    pessoa = containerPessoas.buscar(email);
+    pessoa = repositorio.buscar(email);
 
     if (pessoa.getSenha().getValor() != senha.getValor()) {
         throw invalid_argument("Senha incorreta.");
