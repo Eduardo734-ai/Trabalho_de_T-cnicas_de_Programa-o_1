@@ -1,201 +1,166 @@
-# 📌 Sistema de Gerenciamento de Projetos (TP1)
-
-## 📖 Descrição
-
-Este projeto foi desenvolvido como trabalho final da disciplina de Técnicas de Programação 1.
-O sistema implementa um ambiente completo de gerenciamento de projetos ágeis, incluindo:
-
-* cadastro de usuários
-* autenticação e controle de acesso
-* gerenciamento de projetos
-* planos de sprint
-* histórias de usuário
-* associações entre entidades
-* regras de negócio completas
+# 🚀 Sistema de Gerenciamento de Projetos  
+### C++ | SQLite | Arquitetura em Camadas
 
 ---
 
-## 🧠 Arquitetura do Projeto
+## 📌 Visão Geral
 
-O sistema foi estruturado em camadas, seguindo boas práticas de organização:
+Este projeto implementa um sistema completo de gerenciamento de projetos utilizando **C++** com persistência em **SQLite**.
 
-```
-dominio → validações
-entidade → objetos do sistema
-servico → regras de negócio
-associacao → relacionamentos
-container → armazenamento em memória
-apresentacao → interface (menus)
-```
+O sistema foi projetado seguindo princípios de **separação de responsabilidades**, evoluindo de uma solução inicial em memória para uma arquitetura com **persistência total de dados**, incluindo entidades e associações.
 
 ---
 
-## 📁 Estrutura de Pastas
+## 🎯 Objetivo
+
+Desenvolver um sistema robusto capaz de:
+
+- Gerenciar usuários e autenticação  
+- Controlar projetos e suas sprints  
+- Gerenciar histórias de usuário  
+- Manter relacionamentos entre entidades  
+- Garantir persistência completa dos dados  
+
+---
+
+## 🧱 Arquitetura
+
+O sistema segue uma arquitetura em camadas bem definida:
 
 ```
-TP1/
-│
-├── include/
-│   ├── dominio/
-│   ├── entidade/
-│   ├── interface/
-│   ├── associacao/
-│   ├── servico/
-│   └── apresentacao/
-│
-├── src/
-│   ├── dominio/
-│   ├── entidade/
-│   ├── associacao/
-│   ├── servico/
-│   └── apresentacao/
-│
-├── sqlite/ (opcional - banco de dados)
-├── main.cpp
+include/
+├── dominio/        → Validação e regras básicas
+├── entidade/       → Modelos do sistema
+├── servico/        → Lógica de negócio
+├── banco/          → Persistência (SQLite)
+├── associacao/     → Relacionamentos
+└── apresentacao/   → Interface (menu)
+
+src/
+├── dominio/
+├── entidade/
+├── servico/
+├── banco/
+├── associacao/
+└── apresentacao/
 ```
 
 ---
 
-## ⚙️ Funcionalidades
+## ⚙️ Tecnologias Utilizadas
 
-### 👤 Usuários
-
-* Criar, ler, atualizar e excluir
-* Papéis:
-
-  * Desenvolvedor
-  * Mestre Scrum
-  * Proprietário de Produto
-
-### 🔐 Autenticação
-
-* Login e logout
-* Controle de acesso por papel
-
-### 📂 Projetos
-
-* Criados por Product Owner
-* Associados a um Mestre Scrum
-
-### 📅 Planos de Sprint
-
-* Criados por Mestre Scrum
-* Restrição de capacidade baseada na duração do projeto
-
-### 🧾 Histórias de Usuário
-
-* Criadas por Product Owner
-* Estado inicial: `A FAZER`
-* Movimentação entre sprints
-
-### 🔗 Associações
-
-* Pessoa ↔ Projeto
-* História ↔ Projeto
-* História ↔ Pessoa
-* História ↔ Sprint
+- C++
+- SQLite3
+- GCC (Code::Blocks)
 
 ---
 
-## 📏 Regras de Negócio
+## 💾 Persistência de Dados
 
-O sistema implementa validações importantes, como:
+O sistema utiliza SQLite para garantir persistência completa.
 
-* senha com padrão específico
-* papéis válidos
-* limite de capacidade de sprint
-* não permitir exclusão com dependências
-* controle de acesso por tipo de usuário
+### Entidades:
+- Pessoa  
+- Projeto  
+- Plano de Sprint  
+- História de Usuário  
+
+### Associações:
+- Projeto ↔ Pessoa  
+- Projeto ↔ História  
+- Projeto ↔ Plano  
+- História ↔ Pessoa  
+- História ↔ Plano  
+
+✔ Os dados permanecem salvos mesmo após fechar o sistema.
 
 ---
 
-## 🚀 Como executar o projeto
+## 🚀 Funcionalidades
 
-### 🔹 Pré-requisitos
-
-* Code::Blocks
-* Compilador C++
-* (Opcional) SQLite
+- Cadastro e autenticação de usuários  
+- Controle de permissões (papéis)  
+- Criação e gerenciamento de projetos  
+- Associação de usuários a projetos  
+- Criação de planos de sprint  
+- Validação de capacidade de sprint  
+- Criação de histórias de usuário  
+- Associação de histórias a projetos, usuários e sprints  
+- Atualização e exclusão com validação  
+- Persistência completa em banco  
 
 ---
 
-### 🔹 Passo a passo
+## 🧠 Regras de Negócio
 
-1. Clone o repositório:
+- Projeto deve ter um **Mestre Scrum**  
+- Capacidade total das sprints ≤ duração do projeto  
+- Soma das histórias ≤ capacidade da sprint  
+- Não é possível excluir entidades associadas  
+
+---
+
+## ▶️ Como Executar
+
+### 1. Clonar o repositório
 
 ```bash
 git clone [https://github.com/Eduardo734-ai/Trabalho_de_T-cnicas_de_Programa-o_1.git]
 ```
 
-2. Abra o projeto no Code::Blocks
+### 2. Abrir no Code::Blocks
 
-3. Compile o projeto
+- Abra o arquivo `.cbp`  
+- Configure o compilador (GCC)  
 
-4. Execute o programa
-
----
-
-### 🔹 Execução
-
-O sistema roda via terminal com menus interativos:
+### 3. Compilar
 
 ```
-===== MENU INICIAL =====
-1 - Cadastrar usuário
-2 - Login
-0 - Sair
+Build → Build
 ```
 
----
-
-## 🗄️ Banco de Dados (SQLite - opcional)
-
-O projeto pode ser adaptado para uso com SQLite.
-
-### Para configurar:
-
-1. Baixar SQLite:
-   https://www.sqlite.org/download.html
-
-2. Adicionar arquivos:
+### 4. Executar
 
 ```
-sqlite3.c
-sqlite3.h
-sqlite3.dll
+Build → Run
 ```
-
-3. Incluir no projeto no Code::Blocks
-
----
-
-## 🧪 Testes
-
-O sistema pode ser testado com o seguinte fluxo:
-
-1. Criar usuário (Product Owner)
-2. Criar usuário (Mestre Scrum)
-3. Login como Product Owner
-4. Criar projeto
-5. Login como Scrum Master
-6. Criar sprint
-7. Criar história
-8. Associar dados
-9. Mover história para sprint
-10. Alterar estado
-11. Listar dados
 
 ---
 
 ## 📌 Observações
 
-* O sistema foi inicialmente implementado com armazenamento em memória
-* Estrutura preparada para futura integração com banco de dados
-* Código organizado para facilitar manutenção e expansão
+- O banco é criado automaticamente  
+- Para resetar, exclua o arquivo `.db`  
+- Entradas são validadas pelas classes de domínio  
+
+---
+
+## 📈 Evolução do Projeto
+
+1. Implementação em memória  
+2. Criação das entidades  
+3. Aplicação de regras de negócio  
+4. Migração para SQLite  
+5. Persistência das associações  
+6. Testes completos  
+
+---
+
+## 🧪 Testes
+
+- Fluxo completo validado (usuário → projeto → sprint → história)  
+- Associação entre entidades  
+- Persistência confirmada após reiniciar o sistema  
 
 ---
 
 ## 👨‍💻 Autor
 
-Carlos Eduardo
-Universidade de Brasília (UnB)
+Carlos Eduardo de Oliveira Cardoso
+Engenharia de Computação — UnB  
+
+---
+
+## 📬 Contato
+
+GitHub: https://github.com/SEU-USUARIO
