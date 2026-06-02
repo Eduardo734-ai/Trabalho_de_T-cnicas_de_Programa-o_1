@@ -3,15 +3,41 @@
 
 #include"dominio/Codigo.h"
 
+/**
+ * @brief Classe de associação que vincula uma História de Usuário a um Plano de Sprint.
+ * * Atua como uma entidade associativa no modelo orientado a objetos, representando
+ * a alocação de um requisito em um ciclo de execução específico. É essencial para
+ * gerenciar o escopo de uma iteração (sprint backlog) e permitir o cálculo da
+ * capacidade de esforço exigida pelas regras de negócio.
+ */
 class AssociacaoHistoriaPlano{
     private:
         Codigo codigoHistoria;
         Codigo codigoPlano;
+
     public:
+        /**
+         * @brief Define o identificador da tarefa que está sendo alocada no sprint.
+         * * @param codigoHistoria Objeto da classe de domínio Codigo representando a história de usuário.
+         */
         void setCodigoHistoria(Codigo codigoHistoria);
+
+        /**
+         * @brief Recupera o identificador da tarefa associada neste vínculo.
+         * * @return Codigo Objeto de domínio contendo a chave da história de usuário.
+         */
         Codigo getCodigoHistoria() const;
 
+        /**
+         * @brief Define o identificador do ciclo de execução (sprint) de destino.
+         * * @param codigoPlano Objeto da classe de domínio Codigo representando o plano de sprint.
+         */
         void setCodigoPlano(Codigo codigoPlano);
+
+        /**
+         * @brief Recupera o identificador do plano de sprint associado neste vínculo.
+         * * @return Codigo Objeto de domínio contendo a chave do ciclo de execução.
+         */
         Codigo getCodigoPlano() const;
 };
 
