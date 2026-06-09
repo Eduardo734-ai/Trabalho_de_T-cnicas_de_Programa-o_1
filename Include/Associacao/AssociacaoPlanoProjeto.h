@@ -3,15 +3,41 @@
 
 #include"dominio/Codigo.h"
 
+/**
+ * @brief Classe de associação que vincula um Plano de Sprint a um Projeto.
+ * * Atua como uma entidade associativa no modelo orientado a objetos, estabelecendo
+ * a relação hierárquica de contenção onde um macroescopo (Projeto) possui múltiplos
+ * ciclos de execução (Sprints). É fundamental para garantir a integridade estrutural
+ * e a organização cronológica do sistema.
+ */
 class AssociacaoPlanoProjeto{
     private:
         Codigo codigoPlano;
         Codigo codigoProjeto;
+
     public:
+        /**
+         * @brief Define o identificador do ciclo de execução (sprint) a ser vinculado.
+         * * @param codigoPlano Objeto da classe de domínio Codigo representando o plano de sprint.
+         */
         void setCodigoPlano(Codigo codigoPlano);
+
+        /**
+         * @brief Recupera o identificador do plano de sprint associado neste vínculo.
+         * * @return Codigo Objeto de domínio contendo a chave do ciclo de execução.
+         */
         Codigo getCodigoPlano() const;
 
+        /**
+         * @brief Define o identificador do projeto (macroescopo) pai.
+         * * @param codigoProjeto Objeto da classe de domínio Codigo representando o projeto detentor do sprint.
+         */
         void setCodigoProjeto(Codigo codigoProjeto);
+
+        /**
+         * @brief Recupera o identificador do projeto hierarquicamente superior neste vínculo.
+         * * @return Codigo Objeto de domínio contendo a chave do macroescopo.
+         */
         Codigo getCodigoProjeto() const;
 };
 
