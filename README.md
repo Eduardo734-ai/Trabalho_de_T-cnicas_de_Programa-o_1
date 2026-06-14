@@ -154,13 +154,31 @@ Build → Run
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
 Carlos Eduardo de Oliveira Cardoso
 Engenharia de Computação — UnB  
+
+Felipe Maximiano Cotrim
+Engenharia de Computação — UnB
+
+Luis Augusto de Holanda Azevedo
+Engenharia de Computação — UnB
 
 ---
 
 ## 📬 Contato
 
+Carlos Eduardo
 GitHub: https://github.com/Eduardo734-ai
+Email: carloseduardo220805@gmail.com
+
+Felipe Maximiano
+GitHub: https://github.com/Felpera935
+Email: felipemaximiano935@gmail.com
+
+Luiz Augusto
+GitHub: https://github.com/luisholand4
+Email: luisaugustoha@gmail.com
+
+
