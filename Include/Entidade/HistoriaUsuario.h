@@ -1,13 +1,13 @@
 #ifndef HISTORIAUSUARIO_H_INCLUDED
 #define HISTORIAUSUARIO_H_INCLUDED
 
-#include"dominio/Codigo.h"
-#include"dominio/Nome.h"
-#include"dominio/Papel.h"
-#include"dominio/Texto.h"
-#include"dominio/Tempo.h"
-#include"dominio/Prioridade.h"
-#include"dominio/Estado.h"
+#include"Dominio/Codigo.h"
+#include"Dominio/Nome.h"
+#include"Dominio/Papel.h"
+#include"Dominio/Texto.h"
+#include"Dominio/Tempo.h"
+#include"Dominio/Prioridade.h"
+#include"Dominio/Estado.h"
 
 /**
  * @brief Requisito funcional do sistema descrito sob a perspectiva de quem o utilizará no fluxo Scrum.
@@ -34,7 +34,7 @@ class HistoriaUsuario{
          *
          * @param codigo Objeto da classe Codigo contendo o identificador previamente validado.
          */
-        void setCodigo(Codigo codigo);
+        void setCodigo(const Codigo& codigo);
 
         /**
          * @brief Recupera o identificador único da história.
@@ -48,7 +48,7 @@ class HistoriaUsuario{
          *
          * @param nome Objeto da classe Nome contendo a designação validada.
          */
-        void setNome(Nome nome);
+        void setNome(const Nome& nome);
 
         /**
          * @brief Recupera o título descritivo da história.
@@ -62,7 +62,7 @@ class HistoriaUsuario{
          *
          * @param papel Objeto da classe Papel contendo a função de atuação validada (o "quem").
          */
-        void setPapel(Papel papel);
+        void setPapel(const Papel& papel);
 
         /**
          * @brief Recupera a função do solicitante.
@@ -76,7 +76,7 @@ class HistoriaUsuario{
          *
          * @param acao Objeto da classe Texto contendo a descrição da ação validada (o "o que").
          */
-        void setAcao(Texto acao);
+        void setAcao(const Texto& acao);
 
         /**
          * @brief Recupera a funcionalidade ou atividade desejada.
@@ -90,7 +90,7 @@ class HistoriaUsuario{
          *
          * @param valor Objeto da classe Texto contendo a justificativa validada (o "por que").
          */
-        void setValor(Texto valor);
+        void setValor(const Texto& valor);
 
         /**
          * @brief Recupera o benefício de negócio esperado.
@@ -104,7 +104,7 @@ class HistoriaUsuario{
          *
          * @param estimativa Objeto da classe Tempo contendo a medida de esforço validada.
          */
-        void setEstimativa(Tempo estimativa);
+        void setEstimativa(const Tempo& estimativa);
 
         /**
          * @brief Recupera a quantificação de esforço ou duração esperada.
@@ -118,7 +118,7 @@ class HistoriaUsuario{
          *
          * @param prioridade Objeto da classe Prioridade contendo o grau de importância validado.
          */
-        void setPrioridade(Prioridade prioridade);
+        void setPrioridade(const Prioridade& prioridade);
 
         /**
          * @brief Recupera o nível de urgência para a execução.
@@ -132,7 +132,7 @@ class HistoriaUsuario{
          *
          * @param estado Objeto da classe Estado contendo a fase de desenvolvimento validada.
          */
-        void setEstado(Estado estado);
+        void setEstado(const Estado& estado);
 
         /**
          * @brief Recupera a situação de progresso atual.

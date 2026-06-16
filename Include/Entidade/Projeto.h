@@ -1,9 +1,9 @@
 #ifndef PROJETO_H_INCLUDED
 #define PROJETO_H_INCLUDED
 
-#include"dominio/Codigo.h"
-#include"dominio/Nome.h"
-#include"dominio/Data.h"
+#include"Dominio/Codigo.h"
+#include"Dominio/Nome.h"
+#include"Dominio/Data.h"
 
 /**
  * @brief Iniciativa de alto nível que agrupa e organiza o esforço de desenvolvimento.
@@ -26,7 +26,7 @@ class Projeto{
          *
          * @param codigo Objeto da classe Codigo contendo o identificador validado.
          */
-        void setCodigo(Codigo codigo);
+        void setCodigo(const Codigo& codigo);
 
         /**
          * @brief Recupera o identificador único do projeto.
@@ -40,7 +40,7 @@ class Projeto{
          *
          * @param nome Objeto da classe Nome contendo a identificação textual validada.
          */
-        void setNome(Nome nome);
+        void setNome(const Nome& nome);
 
         /**
          * @brief Recupera o título ou designação do empreendimento.
@@ -54,7 +54,7 @@ class Projeto{
          *
          * @param dataInicio Objeto da classe Data contendo o dia, mês e ano validados.
          */
-        void setDataInicio(Data dataInicio);
+        void setDataInicio(const Data& dataInicio);
 
         /**
          * @brief Recupera o marco temporal de começo das atividades.
@@ -68,7 +68,7 @@ class Projeto{
          *
          * @param dataTermino Objeto da classe Data contendo o dia, mês e ano validados.
          */
-        void setDataTermino(Data dataTermino);
+        void setDataTermino(const Data& dataTermino);
 
         /**
          * @brief Recupera o marco temporal de encerramento das atividades.

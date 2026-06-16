@@ -1,10 +1,10 @@
 #ifndef PESSOA_H_INCLUDED
 #define PESSOA_H_INCLUDED
 
-#include"dominio/Email.h"
-#include"dominio/Nome.h"
-#include"dominio/Senha.h"
-#include"dominio/Papel.h"
+#include"Dominio/Email.h"
+#include"Dominio/Nome.h"
+#include"Dominio/Senha.h"
+#include"Dominio/Papel.h"
 
 /**
  * @brief Entidade que representa um usuário registrado no sistema.
@@ -29,7 +29,7 @@ class Pessoa{
          *
          * @param email Objeto da classe Email contendo o endereço previamente validado.
          */
-        void setEmail(Email email);
+        void setEmail(const Email& email);
 
         /**
          * @brief Recupera o endereço eletrônico do usuário.
@@ -43,7 +43,7 @@ class Pessoa{
          *
          * @param nome Objeto da classe Nome contendo a identificação textual validada.
          */
-        void setNome(Nome nome);
+        void setNome(const Nome& nome);
 
         /**
          * @brief Recupera a designação de identificação do usuário.
@@ -59,7 +59,7 @@ class Pessoa{
          *
          * @param senha Objeto da classe Senha contendo a credencial validada.
          */
-        void setSenha(Senha senha);
+        void setSenha(const Senha& senha);
 
         /**
          * @brief Recupera a credencial de segurança do usuário.
@@ -75,7 +75,7 @@ class Pessoa{
          *
          * @param papel Objeto da classe Papel contendo o cargo validado.
          */
-        void setPapel(Papel papel);
+        void setPapel(const Papel& papel);
 
         /**
          * @brief Recupera a função de atuação do usuário.

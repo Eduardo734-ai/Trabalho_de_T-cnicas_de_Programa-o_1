@@ -1,10 +1,10 @@
 #ifndef PLANODESPRINT_H_INCLUDED
 #define PLANODESPRINT_H_INCLUDED
 
-#include"dominio/Codigo.h"
-#include"dominio/Nome.h"
-#include"dominio/Data.h"
-#include"dominio/Tempo.h"
+#include"Dominio/Codigo.h"
+#include"Dominio/Nome.h"
+#include"Dominio/Data.h"
+#include"Dominio/Tempo.h"
 
 /**
  * @brief Estrutura temporal que define um ciclo de execução dentro do projeto.
@@ -27,7 +27,7 @@ class PlanoDeSprint{
          *
          * @param codigo Objeto da classe Codigo contendo o identificador validado.
          */
-        void setCodigo(Codigo codigo);
+        void setCodigo(const Codigo& codigo);
 
         /**
          * @brief Recupera o identificador único do plano de sprint.
@@ -41,7 +41,7 @@ class PlanoDeSprint{
          *
          * @param nome Objeto da classe Nome contendo a identificação textual validada.
          */
-        void setNome(Nome nome);
+        void setNome(const Nome& nome);
 
         /**
          * @brief Recupera o título ou designação do plano.
@@ -55,7 +55,7 @@ class PlanoDeSprint{
          *
          * @param dataInicio Objeto da classe Data contendo o dia, mês e ano validados.
          */
-        void setDataInicio(Data dataInicio);
+        void setDataInicio(const Data& dataInicio);
 
         /**
          * @brief Recupera o marco temporal de começo da iteração.
@@ -69,7 +69,7 @@ class PlanoDeSprint{
          *
          * @param dataTermino Objeto da classe Data contendo o dia, mês e ano validados.
          */
-        void setDataTermino(Data dataTermino);
+        void setDataTermino(const Data& dataTermino);
 
         /**
          * @brief Recupera o marco temporal de encerramento da iteração.
@@ -85,7 +85,7 @@ class PlanoDeSprint{
          *
          * @param capacidade Objeto da classe Tempo contendo a medida quantitativa validada.
          */
-        void setCapacidade(Tempo capacidade);
+        void setCapacidade(const Tempo& capacidade);
 
         /**
          * @brief Recupera o limite de esforço suportado no ciclo.

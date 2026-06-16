@@ -1,46 +1,53 @@
-#include"dominio/Texto.h"
+#include"Dominio/Texto.h"
 #include<stdexcept>
 #include<cctype>
 
 using namespace std;
 
-void Texto::validar(string valor){
-    int i;
-    char atual;
-    char proximo;
-
-    if(valor.length() == 0 || valor.length() > 40){
-        throw invalid_argument("Texto invalido.");
-    }
-    if(valor[0] == ' ' || valor[0] == ',' || valor[0] == '.'){
-        throw invalid_argument("Texto invalido.");
-    }
-    if(valor[valor.length()-1] == ' ' || valor[valor.length()-1] == ',' || valor[valor.length()-1] == '.'){
+void Texto::validar(string valor) {
+    if (valor.length() == 0 || valor.length() > 40) {
         throw invalid_argument("Texto invalido.");
     }
 
-    for(i=0;i<(int)valor.length();i++){
-        atual = valor[i];
+    char primeiro = valor[0];
+    char ultimo = valor[valor.length() - 1];
 
-        if(!isalpha(atual) && !isdigit(atual) && atual != ' ' && atual != ',' && atual != '.'){
+    if (primeiro == ',' || primeiro == '.' || primeiro == ' ' ||
+        ultimo == ',' || ultimo == '.' || ultimo == ' ') {
+        throw invalid_argument("Texto invalido.");
+    }
+
+    for (size_t i = 0; i < valor.length(); i++) {
+        char atual = valor[i];
+
+        bool letraMaiuscula = atual >= 'A' && atual <= 'Z';
+        bool letraMinuscula = atual >= 'a' && atual <= 'z';
+        bool digito = atual >= '0' && atual <= '9';
+        bool virgula = atual == ',';
+        bool ponto = atual == '.';
+        bool espaco = atual == ' ';
+
+        if (!letraMaiuscula && !letraMinuscula && !digito && !virgula && !ponto && !espaco) {
             throw invalid_argument("Texto invalido.");
         }
-        if(i < (int)valor.length() - 1){
-            proximo = valor[i+1];
-            if(atual == ','){
-                if(proximo == ',' || proximo == '.'){
-                    throw invalid_argument("Texto invalido.");
-                }
+
+        if (virgula || ponto) {
+            char proximo = valor[i + 1];
+
+            if (proximo == ',' || proximo == '.') {
+                throw invalid_argument("Texto invalido.");
             }
-            if(atual == '.'){
-                if(proximo == ',' || proximo == '.'){
-                    throw invalid_argument("Texto invalido.");
-                }
-            }
-            if(atual == ' '){
-                if(!isalpha(proximo) && !isdigit(proximo)){
-                    throw invalid_argument("Texto invalido.");
-                }
+        }
+
+        if (espaco) {
+            char proximo = valor[i + 1];
+
+            bool proximoLetraMaiuscula = proximo >= 'A' && proximo <= 'Z';
+            bool proximoLetraMinuscula = proximo >= 'a' && proximo <= 'z';
+            bool proximoDigito = proximo >= '0' && proximo <= '9';
+
+            if (!proximoLetraMaiuscula && !proximoLetraMinuscula && !proximoDigito) {
+                throw invalid_argument("Texto invalido.");
             }
         }
     }

@@ -1,6 +1,6 @@
-#include"entidade/Projeto.h"
+#include"Entidade/Projeto.h"
 
-void Projeto::setCodigo(Codigo codigo){
+void Projeto::setCodigo(const Codigo& codigo){
     this->codigo = codigo;
 }
 
@@ -8,7 +8,7 @@ Codigo Projeto::getCodigo() const{
     return codigo;
 }
 
-void Projeto::setNome(Nome nome){
+void Projeto::setNome(const Nome& nome){
     this->nome = nome;
 }
 
@@ -16,7 +16,7 @@ Nome Projeto::getNome() const{
     return nome;
 }
 
-void Projeto::setDataInicio(Data dataInicio){
+void Projeto::setDataInicio(const Data& dataInicio){
     this->dataInicio = dataInicio;
 }
 
@@ -24,7 +24,7 @@ Data Projeto::getDataInicio() const{
     return dataInicio;
 }
 
-void Projeto::setDataTermino(Data dataTermino){
+void Projeto::setDataTermino(const Data& dataTermino){
     this->dataTermino = dataTermino;
 }
 

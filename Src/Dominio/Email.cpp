@@ -80,7 +80,7 @@ void Email::validarDominio(string dominio) {
 }
 
 void Email::validar(string valor) {
-    int posArroba = valor.find('@');
+    size_t posArroba = valor.find('@');
 
     if (posArroba == string::npos) {
         throw invalid_argument("Email invalido.");
