@@ -10,7 +10,7 @@ using namespace std;
  *
  * Armazena e valida a fase em que uma tarefa se encontra no ciclo de desenvolvimento.
  * Para manter a consistência com o modelo Scrum exigido, os valores permitidos são
- * estritamente restritos a "A FAZER", "FAZENDO" ou "FEITO"[cite: 1].
+ * estritamente restritos a "A FAZER", "FAZENDO" ou "FEITO".
  */
 class Estado{
     private:
