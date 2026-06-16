@@ -1,7 +1,7 @@
 #ifndef ASSOCIACAOHISTORIAPLANO_H_INCLUDED
 #define ASSOCIACAOHISTORIAPLANO_H_INCLUDED
 
-#include"dominio/Codigo.h"
+#include"Dominio/Codigo.h"
 
 /**
  * @brief Classe de associação que vincula uma História de Usuário a um Plano de Sprint.
@@ -20,7 +20,7 @@ class AssociacaoHistoriaPlano{
          * @brief Define o identificador da tarefa que está sendo alocada no sprint.
          * * @param codigoHistoria Objeto da classe de domínio Codigo representando a história de usuário.
          */
-        void setCodigoHistoria(Codigo codigoHistoria);
+        void setCodigoHistoria(const Codigo& codigoHistoria);
 
         /**
          * @brief Recupera o identificador da tarefa associada neste vínculo.
@@ -32,7 +32,7 @@ class AssociacaoHistoriaPlano{
          * @brief Define o identificador do ciclo de execução (sprint) de destino.
          * * @param codigoPlano Objeto da classe de domínio Codigo representando o plano de sprint.
          */
-        void setCodigoPlano(Codigo codigoPlano);
+        void setCodigoPlano(const Codigo& codigoPlano);
 
         /**
          * @brief Recupera o identificador do plano de sprint associado neste vínculo.

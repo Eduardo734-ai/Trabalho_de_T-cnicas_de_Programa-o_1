@@ -1,8 +1,8 @@
 #ifndef ASSOCIACAOHISTORIAPESSOA_H_INCLUDED
 #define ASSOCIACAOHISTORIAPESSOA_H_INCLUDED
 
-#include"dominio/Codigo.h"
-#include"dominio/Email.h"
+#include"Dominio/Codigo.h"
+#include"Dominio/Email.h"
 
 /**
  * @brief Classe de associação que vincula uma História de Usuário a um Colaborador (Pessoa).
@@ -21,7 +21,7 @@ class AssociacaoHistoriaPessoa{
          * @brief Define o identificador da tarefa que está sendo atribuída.
          * * @param codigoHistoria Objeto da classe de domínio Codigo representando a história de usuário.
          */
-        void setCodigoHistoria(Codigo codigoHistoria);
+        void setCodigoHistoria(const Codigo& codigoHistoria);
 
         /**
          * @brief Recupera o identificador da tarefa associada neste vínculo.
@@ -33,7 +33,7 @@ class AssociacaoHistoriaPessoa{
          * @brief Define o identificador do colaborador que assumirá a tarefa.
          * * @param emailPessoa Objeto da classe de domínio Email representando o usuário responsável.
          */
-        void setEmailPessoa(Email emailPessoa);
+        void setEmailPessoa(const Email& emailPessoa);
 
         /**
          * @brief Recupera o identificador do colaborador vinculado a esta tarefa.

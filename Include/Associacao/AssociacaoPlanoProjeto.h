@@ -1,7 +1,7 @@
 #ifndef ASSOCIACAOPLANOPROJETO_H_INCLUDED
 #define ASSOCIACAOPLANOPROJETO_H_INCLUDED
 
-#include"dominio/Codigo.h"
+#include"Dominio/Codigo.h"
 
 /**
  * @brief Classe de associação que vincula um Plano de Sprint a um Projeto.
@@ -20,7 +20,7 @@ class AssociacaoPlanoProjeto{
          * @brief Define o identificador do ciclo de execução (sprint) a ser vinculado.
          * * @param codigoPlano Objeto da classe de domínio Codigo representando o plano de sprint.
          */
-        void setCodigoPlano(Codigo codigoPlano);
+        void setCodigoPlano(const Codigo& codigoPlano);
 
         /**
          * @brief Recupera o identificador do plano de sprint associado neste vínculo.
@@ -32,7 +32,7 @@ class AssociacaoPlanoProjeto{
          * @brief Define o identificador do projeto (macroescopo) pai.
          * * @param codigoProjeto Objeto da classe de domínio Codigo representando o projeto detentor do sprint.
          */
-        void setCodigoProjeto(Codigo codigoProjeto);
+        void setCodigoProjeto(const Codigo& codigoProjeto);
 
         /**
          * @brief Recupera o identificador do projeto hierarquicamente superior neste vínculo.

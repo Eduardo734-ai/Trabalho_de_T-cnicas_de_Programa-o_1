@@ -1,6 +1,6 @@
-#include"associacao/AssociacaoHistoriaPlano.h"
+#include"Associacao/AssociacaoHistoriaPlano.h"
 
-void AssociacaoHistoriaPlano::setCodigoHistoria(Codigo codigoHistoria){
+void AssociacaoHistoriaPlano::setCodigoHistoria(const Codigo& codigoHistoria){
     this->codigoHistoria = codigoHistoria;
 }
 
@@ -8,7 +8,7 @@ Codigo AssociacaoHistoriaPlano::getCodigoHistoria() const{
     return codigoHistoria;
 }
 
-void AssociacaoHistoriaPlano::setCodigoPlano(Codigo codigoPlano){
+void AssociacaoHistoriaPlano::setCodigoPlano(const Codigo& codigoPlano){
     this->codigoPlano = codigoPlano;
 }
 

@@ -1,6 +1,6 @@
-#include"associacao/AssociacaoPlanoProjeto.h"
+#include"Associacao/AssociacaoPlanoProjeto.h"
 
-void AssociacaoPlanoProjeto::setCodigoPlano(Codigo codigoPlano){
+void AssociacaoPlanoProjeto::setCodigoPlano(const Codigo& codigoPlano){
     this->codigoPlano = codigoPlano;
 }
 
@@ -8,7 +8,7 @@ Codigo AssociacaoPlanoProjeto::getCodigoPlano() const{
     return codigoPlano;
 }
 
-void AssociacaoPlanoProjeto::setCodigoProjeto(Codigo codigoProjeto){
+void AssociacaoPlanoProjeto::setCodigoProjeto(const Codigo& codigoProjeto){
     this->codigoProjeto = codigoProjeto;
 }
 

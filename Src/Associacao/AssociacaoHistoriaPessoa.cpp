@@ -1,6 +1,6 @@
-#include"associacao/AssociacaoHistoriaPessoa.h"
+#include"Associacao/AssociacaoHistoriaPessoa.h"
 
-void AssociacaoHistoriaPessoa::setCodigoHistoria(Codigo codigoHistoria){
+void AssociacaoHistoriaPessoa::setCodigoHistoria(const Codigo& codigoHistoria){
     this->codigoHistoria = codigoHistoria;
 }
 
@@ -8,7 +8,7 @@ Codigo AssociacaoHistoriaPessoa::getCodigoHistoria() const{
     return codigoHistoria;
 }
 
-void AssociacaoHistoriaPessoa::setEmailPessoa(Email emailPessoa){
+void AssociacaoHistoriaPessoa::setEmailPessoa(const Email& emailPessoa){
     this->emailPessoa = emailPessoa;
 }
 

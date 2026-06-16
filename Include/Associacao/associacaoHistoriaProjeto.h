@@ -1,7 +1,7 @@
 #ifndef ASSOCIACAOHISTORIAPROJETO_H_INCLUDED
 #define ASSOCIACAOHISTORIAPROJETO_H_INCLUDED
 
-#include"dominio/Codigo.h"
+#include"Dominio/Codigo.h"
 
 /**
  * @brief Classe de associação que vincula uma História de Usuário a um Projeto.
@@ -20,7 +20,7 @@ class AssociacaoHistoriaProjeto{
          * @brief Define o identificador da tarefa que está sendo vinculada ao projeto.
          * * @param codigoHistoria Objeto da classe de domínio Codigo representando a história de usuário.
          */
-        void setCodigoHistoria(Codigo codigoHistoria);
+        void setCodigoHistoria(const Codigo& codigoHistoria);
 
         /**
          * @brief Recupera o identificador da tarefa associada neste vínculo global.
@@ -32,7 +32,7 @@ class AssociacaoHistoriaProjeto{
          * @brief Define o identificador do projeto (macroescopo) de destino.
          * * @param codigoProjeto Objeto da classe de domínio Codigo representando o projeto pai.
          */
-        void setCodigoProjeto(Codigo codigoProjeto);
+        void setCodigoProjeto(const Codigo& codigoProjeto);
 
         /**
          * @brief Recupera o identificador do projeto associado neste vínculo.

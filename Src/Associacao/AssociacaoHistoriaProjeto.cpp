@@ -1,6 +1,6 @@
-#include"associacao/associacaoHistoriaProjeto.h"
+#include"Associacao/associacaoHistoriaProjeto.h"
 
-void AssociacaoHistoriaProjeto::setCodigoHistoria(Codigo codigoHistoria){
+void AssociacaoHistoriaProjeto::setCodigoHistoria(const Codigo& codigoHistoria){
     this->codigoHistoria = codigoHistoria;
 }
 
@@ -8,7 +8,7 @@ Codigo AssociacaoHistoriaProjeto::getCodigoHistoria() const{
     return codigoHistoria;
 }
 
-void AssociacaoHistoriaProjeto::setCodigoProjeto(Codigo codigoProjeto){
+void AssociacaoHistoriaProjeto::setCodigoProjeto(const Codigo& codigoProjeto){
     this->codigoProjeto = codigoProjeto;
 }
 

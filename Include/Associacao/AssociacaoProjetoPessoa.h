@@ -1,8 +1,8 @@
 #ifndef ASSOCIACAOPROJETOPESSOA_H_INCLUDED
 #define ASSOCIACAOPROJETOPESSOA_H_INCLUDED
 
-#include"dominio/Codigo.h"
-#include"dominio/Email.h"
+#include"Dominio/Codigo.h"
+#include"Dominio/Email.h"
 
 /**
  * @brief Classe de associação que vincula um Projeto a um Colaborador (Pessoa).
@@ -21,7 +21,7 @@ class AssociacaoProjetoPessoa{
          * @brief Define o identificador do projeto que receberá o colaborador.
          * * @param codigoProjeto Objeto da classe de domínio Codigo representando o macroescopo.
          */
-        void setCodigoProjeto(Codigo codigoProjeto);
+        void setCodigoProjeto(const Codigo& codigoProjeto);
 
         /**
          * @brief Recupera o identificador do projeto associado neste vínculo de equipe.
@@ -33,7 +33,7 @@ class AssociacaoProjetoPessoa{
          * @brief Define o identificador do usuário a ser integrado à equipe do projeto.
          * * @param emailPessoa Objeto da classe de domínio Email representando o colaborador.
          */
-        void setEmailPessoa(Email emailPessoa);
+        void setEmailPessoa(const Email& emailPessoa);
 
         /**
          * @brief Recupera o identificador do colaborador associado a este projeto.
