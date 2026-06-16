@@ -17,7 +17,7 @@ using namespace std;
  * - Ponto ou hífen deve ser imediatamente seguido por letra(s) ou dígito(s).
  * - Comprimento máximo de 64 caracteres].
  *
- * Regras do Domínio[cite: 1]:
+ * Regras do Domínio:
  * - Composto por uma ou mais partes separadas por ponto (.)].
  * - Cada parte pode conter letras (a-z), dígitos (0-9) ou hifens (-).
  * - Nenhuma parte pode iniciar ou terminar com hífen.
