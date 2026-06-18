@@ -7,6 +7,12 @@
 #include "../servico/ServicoPlanoDeSprint.h"
 #include "../servico/ServicoHistoriaUsuario.h"
 
+#include "Apresentacao/ControladoraPessoa.h"
+#include "Apresentacao/ControladoraProjeto.h"
+#include "Apresentacao/ControladoraPlanoDeSprint.h"
+#include "Apresentacao/ControladoraHistoria.h"
+#include "Apresentacao/ControladoraAssociacoes.h"
+
 /**
  * @brief Orquestradora principal da camada de Apresentação (Interface de Usuário).
  * * Atua como o ponto central de interação do sistema. É responsável por renderizar
@@ -21,6 +27,12 @@ private:
     ServicoProjeto servicoProjeto;
     ServicoPlanoDeSprint servicoPlano;
     ServicoHistoriaUsuario servicoHistoria;
+
+    ControladoraPessoa* controladoraPessoa;
+    ControladoraProjeto* controladoraProjeto;
+    ControladoraPlanoDeSprint* controladoraPlano;
+    ControladoraHistoria* controladoraHistoria;
+    ControladoraAssociacoes* controladoraAssociacoes;
 
     /** @brief Renderiza o menu de boas-vindas (Login/Cadastro/Sair). */
     void menuInicial();
@@ -117,6 +129,9 @@ public:
      * bootstrap (inicialização) do sistema e carregar a primeira tela de interação.
      */
     void executar();
+
+    ControladoraSistema();
+    ~ControladoraSistema();
 };
 
 #endif // CONTROLADORASISTEMA_H_INCLUDED
