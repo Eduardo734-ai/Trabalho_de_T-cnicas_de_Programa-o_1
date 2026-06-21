@@ -95,24 +95,22 @@ $(function(){initNavTree('class_associacao_historia_projeto.html','','class_asso
 <p>Classe de associação que vincula uma História de Usuário a um <a class="el" href="class_projeto.html" title="Iniciativa de alto nível que agrupa e organiza o esforço de desenvolvimento.">Projeto</a>.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="associacao_historia_projeto_8h_source.html">associacaoHistoriaProjeto.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_associacao_historia_projeto_8h_source.html">AssociacaoHistoriaProjeto.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa09cb43cc4092881b8430ec976bfb74b" id="r_aa09cb43cc4092881b8430ec976bfb74b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa09cb43cc4092881b8430ec976bfb74b">setCodigoHistoria</a> (<a class="el" href="class_codigo.html">Codigo</a> codigoHistoria)</td></tr>
-<tr class="memdesc:aa09cb43cc4092881b8430ec976bfb74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o identificador da tarefa que está sendo vinculada ao projeto.  <br /></td></tr>
+<tr class="memitem:a656ac2ae30fd21b483f75d7b4c74c309" id="r_a656ac2ae30fd21b483f75d7b4c74c309"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a656ac2ae30fd21b483f75d7b4c74c309">setCodigoHistoria</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria)</td></tr>
+<tr class="memdesc:a656ac2ae30fd21b483f75d7b4c74c309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o identificador da tarefa que está sendo vinculada ao projeto.  <br /></td></tr>
 <tr class="memitem:a79425ceff40adc4085d90526118ed38b" id="r_a79425ceff40adc4085d90526118ed38b"><td class="memItemLeft"><a class="el" href="class_codigo.html">Codigo</a>&#160;</td><td class="memItemRight"><a class="el" href="#a79425ceff40adc4085d90526118ed38b">getCodigoHistoria</a> () const</td></tr>
 <tr class="memdesc:a79425ceff40adc4085d90526118ed38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recupera o identificador da tarefa associada neste vínculo global.  <br /></td></tr>
-<tr class="memitem:a6bba232bfab636fad2a93bce42949650" id="r_a6bba232bfab636fad2a93bce42949650"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6bba232bfab636fad2a93bce42949650">setCodigoProjeto</a> (<a class="el" href="class_codigo.html">Codigo</a> codigoProjeto)</td></tr>
-<tr class="memdesc:a6bba232bfab636fad2a93bce42949650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o identificador do projeto (macroescopo) de destino.  <br /></td></tr>
+<tr class="memitem:a1ef7b60c681886d3a903fc1ccf79ee0c" id="r_a1ef7b60c681886d3a903fc1ccf79ee0c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1ef7b60c681886d3a903fc1ccf79ee0c">setCodigoProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto)</td></tr>
+<tr class="memdesc:a1ef7b60c681886d3a903fc1ccf79ee0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o identificador do projeto (macroescopo) de destino.  <br /></td></tr>
 <tr class="memitem:a1ccb4e210adc29f4f869e7237955bf7a" id="r_a1ccb4e210adc29f4f869e7237955bf7a"><td class="memItemLeft"><a class="el" href="class_codigo.html">Codigo</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1ccb4e210adc29f4f869e7237955bf7a">getCodigoProjeto</a> () const</td></tr>
 <tr class="memdesc:a1ccb4e210adc29f4f869e7237955bf7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recupera o identificador do projeto associado neste vínculo.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe de associação que vincula uma História de Usuário a um <a class="el" href="class_projeto.html" title="Iniciativa de alto nível que agrupa e organiza o esforço de desenvolvimento.">Projeto</a>. </p>
-<ul>
-<li>Atua como uma entidade associativa no modelo orientado a objetos, representando o pertencimento de um requisito funcional ao escopo global de um projeto (Product Backlog). É a estrutura base que garante que todas as tarefas, mesmo as não alocadas em sprints, permaneçam rastreáveis dentro do seu respectivo macroescopo. </li>
-</ul>
+<p>Atua como uma entidade associativa no modelo orientado a objetos, representando o pertencimento de um requisito funcional ao escopo global de um projeto (Product Backlog). É a estrutura base que garante que todas as tarefas, mesmo as não alocadas em sprints, permaneçam rastreáveis dentro do seu respectivo macroescopo. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a79425ceff40adc4085d90526118ed38b" name="a79425ceff40adc4085d90526118ed38b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79425ceff40adc4085d90526118ed38b">&#9670;&#160;</a></span>getCodigoHistoria()</h2>
@@ -130,10 +128,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Recupera o identificador da tarefa associada neste vínculo global. </p>
-<ul>
-<li><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_codigo.html" title="Classe de domínio que representa um conjunto de sinais, regras ou símbolos utilizados para representa...">Codigo</a> Objeto de domínio contendo a chave da história de usuário. </dd></dl>
-</li>
-</ul>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_codigo.html" title="Classe de domínio que representa um conjunto de sinais, regras ou símbolos utilizados para representa...">Codigo</a> Objeto de domínio contendo a chave da história de usuário. </dd></dl>
 
 </div>
 </div>
@@ -153,15 +148,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Recupera o identificador do projeto associado neste vínculo. </p>
-<ul>
-<li><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_codigo.html" title="Classe de domínio que representa um conjunto de sinais, regras ou símbolos utilizados para representa...">Codigo</a> Objeto de domínio contendo a chave do macroescopo. </dd></dl>
-</li>
-</ul>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_codigo.html" title="Classe de domínio que representa um conjunto de sinais, regras ou símbolos utilizados para representa...">Codigo</a> Objeto de domínio contendo a chave do macroescopo. </dd></dl>
 
 </div>
 </div>
-<a id="aa09cb43cc4092881b8430ec976bfb74b" name="aa09cb43cc4092881b8430ec976bfb74b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa09cb43cc4092881b8430ec976bfb74b">&#9670;&#160;</a></span>setCodigoHistoria()</h2>
+<a id="a656ac2ae30fd21b483f75d7b4c74c309" name="a656ac2ae30fd21b483f75d7b4c74c309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656ac2ae30fd21b483f75d7b4c74c309">&#9670;&#160;</a></span>setCodigoHistoria()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,27 +161,24 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void AssociacaoHistoriaProjeto::setCodigoHistoria </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_codigo.html">Codigo</a></td>          <td class="paramname"><span class="paramname"><em>codigoHistoria</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>codigoHistoria</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Define o identificador da tarefa que está sendo vinculada ao projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigoHistoria</td><td>Objeto da classe de domínio <a class="el" href="class_codigo.html" title="Classe de domínio que representa um conjunto de sinais, regras ou símbolos utilizados para representa...">Codigo</a> representando a história de usuário. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>
-<a id="a6bba232bfab636fad2a93bce42949650" name="a6bba232bfab636fad2a93bce42949650"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bba232bfab636fad2a93bce42949650">&#9670;&#160;</a></span>setCodigoProjeto()</h2>
+<a id="a1ef7b60c681886d3a903fc1ccf79ee0c" name="a1ef7b60c681886d3a903fc1ccf79ee0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef7b60c681886d3a903fc1ccf79ee0c">&#9670;&#160;</a></span>setCodigoProjeto()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,27 +186,24 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void AssociacaoHistoriaProjeto::setCodigoProjeto </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_codigo.html">Codigo</a></td>          <td class="paramname"><span class="paramname"><em>codigoProjeto</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>codigoProjeto</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Define o identificador do projeto (macroescopo) de destino. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigoProjeto</td><td>Objeto da classe de domínio <a class="el" href="class_codigo.html" title="Classe de domínio que representa um conjunto de sinais, regras ou símbolos utilizados para representa...">Codigo</a> representando o projeto pai. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Associacao/<a class="el" href="associacao_historia_projeto_8h_source.html">associacaoHistoriaProjeto.h</a></li>
+<li>Associacao/<a class="el" href="_associacao_historia_projeto_8h_source.html">AssociacaoHistoriaProjeto.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

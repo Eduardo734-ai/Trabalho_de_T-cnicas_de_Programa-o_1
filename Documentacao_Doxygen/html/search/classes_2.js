@@ -10,5 +10,10 @@ var searchData=
   ['containerpessoas_7',['ContainerPessoas',['../class_container_pessoas.html',1,'']]],
   ['containerplanosdesprint_8',['ContainerPlanosDeSprint',['../class_container_planos_de_sprint.html',1,'']]],
   ['containerprojetos_9',['ContainerProjetos',['../class_container_projetos.html',1,'']]],
-  ['controladorasistema_10',['ControladoraSistema',['../class_controladora_sistema.html',1,'']]]
+  ['controladoraassociacoes_10',['ControladoraAssociacoes',['../class_controladora_associacoes.html',1,'']]],
+  ['controladorahistoria_11',['ControladoraHistoria',['../class_controladora_historia.html',1,'']]],
+  ['controladorapessoa_12',['ControladoraPessoa',['../class_controladora_pessoa.html',1,'']]],
+  ['controladoraplanodesprint_13',['ControladoraPlanoDeSprint',['../class_controladora_plano_de_sprint.html',1,'']]],
+  ['controladoraprojeto_14',['ControladoraProjeto',['../class_controladora_projeto.html',1,'']]],
+  ['controladorasistema_15',['ControladoraSistema',['../class_controladora_sistema.html',1,'']]]
 ];

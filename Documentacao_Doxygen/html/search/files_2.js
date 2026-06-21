@@ -10,5 +10,10 @@ var searchData=
   ['containerpessoas_2eh_7',['ContainerPessoas.h',['../_container_pessoas_8h.html',1,'']]],
   ['containerplanosdesprint_2eh_8',['ContainerPlanosDeSprint.h',['../_container_planos_de_sprint_8h.html',1,'']]],
   ['containerprojetos_2eh_9',['ContainerProjetos.h',['../_container_projetos_8h.html',1,'']]],
-  ['controladorasistema_2eh_10',['ControladoraSistema.h',['../_controladora_sistema_8h.html',1,'']]]
+  ['controladoraassociacoes_2eh_10',['ControladoraAssociacoes.h',['../_controladora_associacoes_8h.html',1,'']]],
+  ['controladorahistoria_2eh_11',['ControladoraHistoria.h',['../_controladora_historia_8h.html',1,'']]],
+  ['controladorapessoa_2eh_12',['ControladoraPessoa.h',['../_controladora_pessoa_8h.html',1,'']]],
+  ['controladoraplanodesprint_2eh_13',['ControladoraPlanoDeSprint.h',['../_controladora_plano_de_sprint_8h.html',1,'']]],
+  ['controladoraprojeto_2eh_14',['ControladoraProjeto.h',['../_controladora_projeto_8h.html',1,'']]],
+  ['controladorasistema_2eh_15',['ControladoraSistema.h',['../_controladora_sistema_8h.html',1,'']]]
 ];

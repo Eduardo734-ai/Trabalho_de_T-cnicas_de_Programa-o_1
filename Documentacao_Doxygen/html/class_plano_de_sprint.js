@@ -5,9 +5,9 @@ var class_plano_de_sprint =
     [ "getDataInicio", "class_plano_de_sprint.html#adbf5da1178689d4ff52e3be538e047b4", null ],
     [ "getDataTermino", "class_plano_de_sprint.html#a3c2e9ff9c5edf20acf411b5b4703f449", null ],
     [ "getNome", "class_plano_de_sprint.html#a94029228f459c9f216b3a1cc4261e6d0", null ],
-    [ "setCapacidade", "class_plano_de_sprint.html#a2b758119514ff438c0f1c573ae5912e6", null ],
-    [ "setCodigo", "class_plano_de_sprint.html#adbb68618a6fe1a3bfe6e602fa7e60d10", null ],
-    [ "setDataInicio", "class_plano_de_sprint.html#a2acb2fcf86e5ff0cdd58121e4a9416ae", null ],
-    [ "setDataTermino", "class_plano_de_sprint.html#a016d5f546d76d496dda0ac329f0bcf5c", null ],
-    [ "setNome", "class_plano_de_sprint.html#a1c133a4f676b4bd0110a347e83c63fb5", null ]
+    [ "setCapacidade", "class_plano_de_sprint.html#ae3d25010275acc531274eda503ec1c33", null ],
+    [ "setCodigo", "class_plano_de_sprint.html#a5e43c9da3b821e029055f6e4d824f52c", null ],
+    [ "setDataInicio", "class_plano_de_sprint.html#a8c31585658ac6de25e76221f408e541f", null ],
+    [ "setDataTermino", "class_plano_de_sprint.html#a9e8d696e41c5227f838fea0dd388d565", null ],
+    [ "setNome", "class_plano_de_sprint.html#ab0e2534018eed21a0c3fff363543df2e", null ]
 ];
