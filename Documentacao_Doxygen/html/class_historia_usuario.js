@@ -8,12 +8,12 @@ var class_historia_usuario =
     [ "getPapel", "class_historia_usuario.html#a1f14846f0cd9d4ddd4432986512a6f5f", null ],
     [ "getPrioridade", "class_historia_usuario.html#a4932df4cb889365274edf09c8c3b82a7", null ],
     [ "getValor", "class_historia_usuario.html#afa2383c0a364b8e4df1c098415601f98", null ],
-    [ "setAcao", "class_historia_usuario.html#ac41dc3d4261c598bba05098dc24f6105", null ],
-    [ "setCodigo", "class_historia_usuario.html#a347a33fad69f52de150439a1b3d413cf", null ],
-    [ "setEstado", "class_historia_usuario.html#a1c466a75a60deba4abec5dc424b57270", null ],
-    [ "setEstimativa", "class_historia_usuario.html#a2940da98a82a3d23a46c5a496a31b9c0", null ],
-    [ "setNome", "class_historia_usuario.html#acd7572ca28e13c662c734568ef2db6d2", null ],
-    [ "setPapel", "class_historia_usuario.html#a2167c10829035d5528cba1913393c644", null ],
-    [ "setPrioridade", "class_historia_usuario.html#a250f8b9e3f173b911f1dc469fdbe97e3", null ],
-    [ "setValor", "class_historia_usuario.html#adc745b1492d2fbe19b93adbb133c016d", null ]
+    [ "setAcao", "class_historia_usuario.html#a550fae8dfc8f84f271021563b583f264", null ],
+    [ "setCodigo", "class_historia_usuario.html#aebd558411208327bed1ff55b06098b47", null ],
+    [ "setEstado", "class_historia_usuario.html#ad258b48abcefed706d82a5c02b33c250", null ],
+    [ "setEstimativa", "class_historia_usuario.html#aad42619f49bd048c83a176b8ea595d1c", null ],
+    [ "setNome", "class_historia_usuario.html#a22c20418a5ecc6f64bc10d0dca82ea26", null ],
+    [ "setPapel", "class_historia_usuario.html#a9661aefa6e84bd75aab69b6583c870c0", null ],
+    [ "setPrioridade", "class_historia_usuario.html#ab20d4eb130c80748eb8d73d736db8df5", null ],
+    [ "setValor", "class_historia_usuario.html#a82d481c6e11f1e12423c4285b388cd87", null ]
 ];

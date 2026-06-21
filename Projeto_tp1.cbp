@@ -37,6 +37,11 @@
 			<Add directory="Include" />
 			<Add directory="sqlite" />
 		</Compiler>
+		<Unit filename="Include/Apresentacao/ControladoraAssociacoes.h" />
+		<Unit filename="Include/Apresentacao/ControladoraHistoria.h" />
+		<Unit filename="Include/Apresentacao/ControladoraPessoa.h" />
+		<Unit filename="Include/Apresentacao/ControladoraPlanoDeSprint.h" />
+		<Unit filename="Include/Apresentacao/ControladoraProjeto.h" />
 		<Unit filename="Include/Apresentacao/ControladoraSistema.h" />
 		<Unit filename="Include/Associacao/AssociacaoHistoriaPessoa.h" />
 		<Unit filename="Include/Associacao/AssociacaoHistoriaPlano.h" />
@@ -86,6 +91,11 @@
 		<Unit filename="Include/Servico/ServicoPlanoDeSprint.h" />
 		<Unit filename="Include/Servico/ServicoProjeto.h" />
 		<Unit filename="Include/Servico/UtilData.h" />
+		<Unit filename="Src/Apresentacao/ControladoraAssociacoes.cpp" />
+		<Unit filename="Src/Apresentacao/ControladoraHistoria.cpp" />
+		<Unit filename="Src/Apresentacao/ControladoraPessoa.cpp" />
+		<Unit filename="Src/Apresentacao/ControladoraPlanoDeSprint.cpp" />
+		<Unit filename="Src/Apresentacao/ControladoraProjeto.cpp" />
 		<Unit filename="Src/Apresentacao/ControladoraSistema.cpp" />
 		<Unit filename="Src/Associacao/AssociacaoHistoriaPessoa.cpp" />
 		<Unit filename="Src/Associacao/AssociacaoHistoriaPlano.cpp" />

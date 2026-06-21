@@ -99,15 +99,64 @@ $(function(){initNavTree('class_controladora_sistema.html','','class_controlador
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a73e4efc34409312a2b1a4e1ee8820b31" id="r_a73e4efc34409312a2b1a4e1ee8820b31"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a73e4efc34409312a2b1a4e1ee8820b31">ControladoraSistema</a> ()</td></tr>
+<tr class="memdesc:a73e4efc34409312a2b1a4e1ee8820b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da Controladora do Sistema.  <br /></td></tr>
+<tr class="memitem:a4a88a823144890c95b2e331c1b0051e9" id="r_a4a88a823144890c95b2e331c1b0051e9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4a88a823144890c95b2e331c1b0051e9">~ControladoraSistema</a> ()</td></tr>
+<tr class="memdesc:a4a88a823144890c95b2e331c1b0051e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Controladora do Sistema.  <br /></td></tr>
 <tr class="memitem:a99072e226796c3ed3eced66c6e0186a3" id="r_a99072e226796c3ed3eced66c6e0186a3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a99072e226796c3ed3eced66c6e0186a3">executar</a> ()</td></tr>
 <tr class="memdesc:a99072e226796c3ed3eced66c6e0186a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia o ciclo de vida da aplicação.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Orquestradora principal da camada de Apresentação (Interface de Usuário). </p>
 <ul>
-<li>Atua como o ponto central de interação do sistema. É responsável por renderizar os menus no terminal, capturar as entradas do usuário, tratar erros de interface e delegar o processamento das regras de negócio para as respectivas classes da camada de Serviço. Mantém o ciclo de vida da aplicação ativo através de loops de execução. </li>
+<li>Atua como o ponto central de interação do sistema. É responsável por instanciar os serviços, renderizar os menus principais no terminal, capturar as entradas do usuário, gerenciar o estado da sessão (login/logout) e delegar a navegação para as sub-controladoras específicas (<a class="el" href="class_pessoa.html" title="Entidade que representa um usuário registrado no sistema.">Pessoa</a>, <a class="el" href="class_projeto.html" title="Iniciativa de alto nível que agrupa e organiza o esforço de desenvolvimento.">Projeto</a>, Plano de Sprint, História e Associações). Mantém o ciclo de vida da aplicação ativo através de loops de execução. </li>
 </ul>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a73e4efc34409312a2b1a4e1ee8820b31" name="a73e4efc34409312a2b1a4e1ee8820b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e4efc34409312a2b1a4e1ee8820b31">&#9670;&#160;</a></span>ControladoraSistema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ControladoraSistema::ControladoraSistema </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor padrão da Controladora do Sistema. </p>
+<ul>
+<li>Responsável por alocar dinamicamente na memória as sub-controladoras e injetar as dependências dos serviços necessários em cada uma delas. </li>
+</ul>
+
+</div>
+</div>
+<a id="a4a88a823144890c95b2e331c1b0051e9" name="a4a88a823144890c95b2e331c1b0051e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a88a823144890c95b2e331c1b0051e9">&#9670;&#160;</a></span>~ControladoraSistema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ControladoraSistema::~ControladoraSistema </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor da Controladora do Sistema. </p>
+<ul>
+<li>Garante a liberação adequada da memória de todos os ponteiros das sub-controladoras instanciadas durante o ciclo de vida da classe. </li>
+</ul>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a99072e226796c3ed3eced66c6e0186a3" name="a99072e226796c3ed3eced66c6e0186a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99072e226796c3ed3eced66c6e0186a3">&#9670;&#160;</a></span>executar()</h2>
 
@@ -125,7 +174,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Inicia o ciclo de vida da aplicação. </p>
 <ul>
-<li>Único método público da classe, acionado pela função main() para realizar o bootstrap (inicialização) do sistema e carregar a primeira tela de interação. </li>
+<li>Único método público operacional da classe, acionado diretamente pela função main() para realizar o bootstrap (inicialização) do sistema e prender o usuário no loop de interação. </li>
 </ul>
 
 </div>
