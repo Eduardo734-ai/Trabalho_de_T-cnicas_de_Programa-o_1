@@ -78,7 +78,6 @@ void ControladoraSistema::executarCadastro() {
     pessoa.setPapel(papel);
 
     servicoAutenticacao.cadastrar(pessoa);
-    servicoPessoa.criar(pessoa);
 
     cout << "Usuario cadastrado com sucesso." << endl;
 }
