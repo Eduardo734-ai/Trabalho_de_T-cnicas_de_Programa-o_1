@@ -32,6 +32,7 @@ void ControladoraAssociacoes::menuAssociacoes() {
     cout << "6 - Listar historias associadas a plano" << endl;
     cout << "7 - Listar historias associadas a pessoa" << endl;
     cout << "8 - Mover historia para sprint" << endl;
+    cout << "9 - Remover associacao projeto-pessoa" << endl;
     cout << "0 - Voltar" << endl;
     cout << "Opcao: ";
 }
@@ -68,6 +69,9 @@ void ControladoraAssociacoes::executar() {
                     break;
                 case 8:
                     moverHistoriaParaSprint();
+                    break;
+                case 9:
+                    removerAssociacaoProjetoPessoa();
                     break;
                 case 0:
                     break;
@@ -278,4 +282,24 @@ void ControladoraAssociacoes::alterarEstadoHistoria() {
     servicoHistoria->alterarEstado(codigoHistoria, estado);
 
     cout << "Estado alterado com sucesso." << endl;
+}
+
+void ControladoraAssociacoes::removerAssociacaoProjetoPessoa() {
+    servicoAutenticacao->exigirProductOwner();
+
+    Codigo codigoProjeto;
+    Email emailPessoa;
+    string entrada;
+
+    cout << "Codigo do projeto: ";
+    cin >> entrada;
+    codigoProjeto.setValor(entrada);
+
+    cout << "Email da pessoa: ";
+    cin >> entrada;
+    emailPessoa.setValor(entrada);
+
+    servicoProjeto->removerAssociacaoProjetoPessoa(codigoProjeto, emailPessoa);
+
+    cout << "Associacao projeto-pessoa removida com sucesso." << endl;
 }

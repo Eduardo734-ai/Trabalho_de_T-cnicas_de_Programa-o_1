@@ -137,6 +137,10 @@ public:
      * * @param codigoHistoria Identificador da tarefa.
      * @param codigoProjeto Identificador do projeto.
      */
+
+    void removerAssociacaoProjetoPessoa(const Codigo &codigoProjeto, const Email &emailPessoa);
+
+
     void associarHistoriaProjeto(const Codigo &codigoHistoria, const Codigo &codigoProjeto);
 
     /**

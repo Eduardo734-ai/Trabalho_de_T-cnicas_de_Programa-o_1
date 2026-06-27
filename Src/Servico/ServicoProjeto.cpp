@@ -109,7 +109,7 @@ void ServicoProjeto::associarPlanoProjeto(const Codigo &codigoPlano, const Codig
     AssociacaoPlanoProjeto associacao;
 
     repositorioProjeto.buscar(codigoProjeto);
-    containerPlanos.buscar(codigoPlano);
+    repositorioPlano.buscar(codigoPlano);
 
     associacao.setCodigoPlano(codigoPlano);
     associacao.setCodigoProjeto(codigoProjeto);
@@ -167,7 +167,6 @@ void ServicoProjeto::criarPlanoAssociadoProjeto(const PlanoDeSprint &plano, cons
         throw invalid_argument("Soma das capacidades dos planos excede a duracao do projeto.");
     }
 
-    registrarPlano(plano);
     associarPlanoProjeto(plano.getCodigo(), codigoProjeto);
 }
 
@@ -221,4 +220,14 @@ vector<PlanoDeSprint> ServicoProjeto::listarPlanosAssociadosProjeto(const Codigo
     }
 
     return planos;
+}
+
+void ServicoProjeto::removerAssociacaoProjetoPessoa(const Codigo &codigoProjeto, const Email &emailPessoa) {
+    repositorioProjeto.buscar(codigoProjeto);
+
+    if (!repositorioAssociacaoProjetoPessoa.existe(codigoProjeto, emailPessoa)) {
+        throw invalid_argument("Associacao projeto-pessoa nao encontrada.");
+    }
+
+    repositorioAssociacaoProjetoPessoa.remover(codigoProjeto, emailPessoa);
 }

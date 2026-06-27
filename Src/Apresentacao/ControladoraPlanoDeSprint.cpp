@@ -102,11 +102,39 @@ void ControladoraPlanoDeSprint::criarPlano() {
     plano.setDataTermino(termino);
     plano.setCapacidade(capacidade);
 
+    /*
+        Primeiro cria o plano, porque a função criarPlanoAssociadoProjeto
+        procura o plano no banco/repositório antes de associar.
+    */
     servicoPlano->criar(plano);
-    servicoProjeto->criarPlanoAssociadoProjeto(plano, codigoProjeto);
-    servicoHistoria->registrarPlano(plano);
 
-    cout << "Plano criado com sucesso." << endl;
+    try {
+        /*
+            Agora tenta associar o plano ao projeto.
+
+            Se a regra de negócio falhar, por exemplo:
+            "Soma das capacidades dos planos excede a duracao do projeto",
+            o catch remove o plano que acabou de ser criado.
+        */
+        servicoProjeto->criarPlanoAssociadoProjeto(plano, codigoProjeto);
+
+        /*
+            Só registra no serviço de histórias depois que a associação
+            com o projeto deu certo.
+        */
+        servicoHistoria->registrarPlano(plano);
+
+        cout << "Plano criado com sucesso." << endl;
+    }
+    catch (invalid_argument &erro) {
+        /*
+            Desfaz o cadastro do plano para ele não ficar salvo no banco
+            quando a associação falhar.
+        */
+        servicoPlano->excluir(codigo);
+
+        throw;
+    }
 }
 
 void ControladoraPlanoDeSprint::lerPlano() {

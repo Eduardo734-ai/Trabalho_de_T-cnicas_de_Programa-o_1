@@ -33,11 +33,13 @@ void RepositorioPlanoDeSprint::inserir(const PlanoDeSprint &plano) {
 
     resultado = sqlite3_step(stmt);
 
-    sqlite3_finalize(stmt);
-
     if (resultado != SQLITE_DONE) {
-        throw invalid_argument("Plano ja cadastrado ou erro ao inserir.");
+        string erro = sqlite3_errmsg(db);
+        sqlite3_finalize(stmt);
+        throw invalid_argument("Erro SQLite: " + erro);
     }
+
+    sqlite3_finalize(stmt);
 }
 
 PlanoDeSprint RepositorioPlanoDeSprint::buscar(const Codigo &codigo) {

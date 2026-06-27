@@ -23,6 +23,7 @@ private:
     ServicoPlanoDeSprint* servicoPlano;       ///< Ponteiro para o componente de regras de negócio de ciclos de execução.
     ServicoHistoriaUsuario* servicoHistoria;   ///< Ponteiro para o componente de regras de negócio de requisitos (Histórias).
 
+
     /**
      * @brief Renderiza no terminal o menu principal dedicado às operações de vinculação, alocação e listagens associativas.
      */
@@ -41,6 +42,10 @@ private:
     /**
      * @brief Solicita o identificador do usuário e apresenta a listagem de todos os Projetos aos quais a Pessoa está associada.
      */
+
+    void removerAssociacaoProjetoPessoa();
+
+
     void listarProjetosPessoa();
 
     /**
