@@ -134,6 +134,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aacc80b1f13b88ffa7e5ec3b14c39924c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os ciclos de execução (Sprints) que pertencem estruturalmente ao projeto.  <br /></td></tr>
 <tr class="memitem:a456e7375f045b0009403a950c4480c68" id="r_a456e7375f045b0009403a950c4480c68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a456e7375f045b0009403a950c4480c68">associarProjetoPessoa</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto, const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa)</td></tr>
 <tr class="memdesc:a456e7375f045b0009403a950c4480c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persiste o vínculo direto de acesso/permissão entre um usuário e um projeto.  <br /></td></tr>
+<tr class="memitem:a82346a33b139dd82cd9b82f9e40fa44b" id="r_a82346a33b139dd82cd9b82f9e40fa44b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a82346a33b139dd82cd9b82f9e40fa44b">removerAssociacaoProjetoPessoa</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto, const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa)</td></tr>
+<tr class="memdesc:a82346a33b139dd82cd9b82f9e40fa44b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove fisicamente o vínculo de colaboração/acesso entre um usuário e um projeto.  <br /></td></tr>
 <tr class="memitem:a105d54d38f08aa3ddacb2066a544a255" id="r_a105d54d38f08aa3ddacb2066a544a255"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a105d54d38f08aa3ddacb2066a544a255">associarHistoriaProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto)</td></tr>
 <tr class="memdesc:a105d54d38f08aa3ddacb2066a544a255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persiste a alocação de uma tarefa existente no backlog do escopo global de um projeto.  <br /></td></tr>
 <tr class="memitem:a70d841ad64e4f9f3adf87fbcb56d19bf" id="r_a70d841ad64e4f9f3adf87fbcb56d19bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a70d841ad64e4f9f3adf87fbcb56d19bf">associarPlanoProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoPlano, const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto)</td></tr>
@@ -148,9 +150,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementação concreta do serviço de gestão e governança de Projetos. </p>
-<ul>
-<li>Esta classe materializa o contrato definido em <a class="el" href="class_i_servico_projeto.html" title="Contrato de delegação de lógica de negócio para a gestão e governança de Projetos.">IServicoProjeto</a> e atua como a orquestradora principal da camada de Serviço. É responsável por integrar múltiplos repositórios do SQLite para persistir a hierarquia do sistema (Projetos, Sprints e Backlog) e gerenciar o controle de acesso das equipes (Pessoas). Utiliza contêineres em memória para otimização do acesso a dados locais durante o processamento das regras de negócio. </li>
-</ul>
+<p>Esta classe materializa o contrato definido em <a class="el" href="class_i_servico_projeto.html" title="Contrato de delegação de lógica de negócio para a gestão e governança de Projetos.">IServicoProjeto</a> e atua como a orquestradora principal da camada de Serviço. É responsável por integrar múltiplos repositórios do SQLite para persistir a hierarquia do sistema (Projetos, Sprints e Backlog) e gerenciar o controle de acesso das equipes (Pessoas). Utiliza contêineres em memória para otimização do acesso a dados locais durante o processamento das regras de negócio. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adc227ce80974900cdca81a13652bb729" name="adc227ce80974900cdca81a13652bb729"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc227ce80974900cdca81a13652bb729">&#9670;&#160;</a></span>ServicoProjeto()</h2>
@@ -192,16 +192,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Persiste a alocação de uma tarefa existente no backlog do escopo global de um projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigoHistoria</td><td>Identificador da tarefa. </td></tr>
     <tr><td class="paramname">codigoProjeto</td><td>Identificador do projeto. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>
@@ -225,16 +222,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Persiste a subordinação de uma sprint pré-existente à estrutura de um projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigoPlano</td><td>Identificador da iteração. </td></tr>
     <tr><td class="paramname">codigoProjeto</td><td>Identificador do projeto pai. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>
@@ -258,16 +252,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Persiste o vínculo direto de acesso/permissão entre um usuário e um projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigoProjeto</td><td>Identificador único do projeto. </td></tr>
     <tr><td class="paramname">emailPessoa</td><td>Identificador do colaborador. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>
@@ -295,15 +286,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Consolida a atualização da entidade <a class="el" href="class_projeto.html" title="Iniciativa de alto nível que agrupa e organiza o esforço de desenvolvimento.">Projeto</a> inteira no repositório. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">projeto</td><td>Entidade contendo o identificador original e os novos atributos. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 <p>Implements <a class="el" href="class_i_servico_projeto.html#a4630cb277152db4e341511bd1df8c8b5">IServicoProjeto</a>.</p>
 
@@ -379,8 +367,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Executa a persistência de um novo macroescopo no banco de dados. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">projeto</td><td>Objeto contendo os dados validados do projeto a ser gravado. </td></tr>
   </table>
@@ -392,8 +379,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 <p>Implements <a class="el" href="class_i_servico_projeto.html#a1f68ff6ab9264d43d956c0e79e2e76c7">IServicoProjeto</a>.</p>
 
@@ -453,16 +438,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Transação composta: Registra uma nova tarefa e já a insere no backlog global do projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">historia</td><td>Nova entidade de requisito funcional. </td></tr>
     <tr><td class="paramname">codigoProjeto</td><td>Identificador do macroescopo de destino. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>
@@ -486,16 +468,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Transação composta: Registra um novo ciclo de execução e o subordina hierarquicamente a um projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plano</td><td>Nova entidade de sprint. </td></tr>
     <tr><td class="paramname">codigoProjeto</td><td>Identificador do macroescopo pai. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>
@@ -523,15 +502,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Executa a remoção física de um projeto, acionando a deleção em cascata de suas associações. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigo</td><td>Identificador do projeto a ser excluído. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 <p>Implements <a class="el" href="class_i_servico_projeto.html#ad472266a3797ec84a7a43ca6a953a54b">IServicoProjeto</a>.</p>
 
@@ -561,16 +537,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Consulta o repositório físico para recuperar a estrutura completa de um projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigo</td><td>Identificador único do projeto a ser localizado. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_projeto.html" title="Iniciativa de alto nível que agrupa e organiza o esforço de desenvolvimento.">Projeto</a> Entidade preenchida com as informações do banco de dados. </dd></dl>
-</li>
-</ul>
 
 <p>Implements <a class="el" href="class_i_servico_projeto.html#a3487205245bcca09bf4437e53ef084ca">IServicoProjeto</a>.</p>
 
@@ -600,16 +573,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Resgata todas as histórias de usuário que compõem o backlog ativo do projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigoProjeto</td><td>Identificador único do escopo. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;HistoriaUsuario&gt; Lista de tarefas alocadas globalmente ao projeto. </dd></dl>
-</li>
-</ul>
 
 <p>Implements <a class="el" href="class_i_servico_projeto.html#a9e6f75dc4761074928fb7b8d5d46adc4">IServicoProjeto</a>.</p>
 
@@ -639,16 +609,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Lista todos os ciclos de execução (Sprints) que pertencem estruturalmente ao projeto. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codigoProjeto</td><td>Identificador único do escopo pai. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;PlanoDeSprint&gt; Lista cronológica de iterações do projeto. </dd></dl>
-</li>
-</ul>
 
 <p>Implements <a class="el" href="class_i_servico_projeto.html#abe4e157a5d53fcdede97ee454f79fffd">IServicoProjeto</a>.</p>
 
@@ -678,16 +645,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Agrupa os macroescopos vinculados a um usuário consultando as tabelas de associação físicas. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">email</td><td>Identificador único do usuário. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;Projeto&gt; Lista de projetos que o usuário possui acesso. </dd></dl>
-</li>
-</ul>
 
 <p>Implements <a class="el" href="class_i_servico_projeto.html#a353544d43cc0630e14a29f217bdfe092">IServicoProjeto</a>.</p>
 
@@ -709,15 +673,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adiciona uma história de usuário ao cache em memória do serviço para validações rápidas. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">historia</td><td>Objeto de requisito funcional. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>
@@ -737,20 +698,47 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adiciona um plano de sprint ao cache em memória do serviço para otimização de consultas de capacidade. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plano</td><td>Objeto de ciclo de execução. </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
+
+</div>
+</div>
+<a id="a82346a33b139dd82cd9b82f9e40fa44b" name="a82346a33b139dd82cd9b82f9e40fa44b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82346a33b139dd82cd9b82f9e40fa44b">&#9670;&#160;</a></span>removerAssociacaoProjetoPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServicoProjeto::removerAssociacaoProjetoPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>codigoProjeto</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>emailPessoa</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove fisicamente o vínculo de colaboração/acesso entre um usuário e um projeto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoProjeto</td><td>Identificador único do macroescopo. </td></tr>
+    <tr><td class="paramname">emailPessoa</td><td>Identificador do colaborador a ser desvinculado da equipe. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Servico/<a class="el" href="_servico_projeto_8h_source.html">ServicoProjeto.h</a></li>
+<li>Include/Servico/<a class="el" href="_servico_projeto_8h_source.html">ServicoProjeto.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

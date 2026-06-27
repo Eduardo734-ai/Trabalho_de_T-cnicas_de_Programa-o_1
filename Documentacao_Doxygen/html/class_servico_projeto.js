@@ -16,5 +16,6 @@ var class_servico_projeto =
     [ "listarPlanosAssociadosProjeto", "class_servico_projeto.html#aacc80b1f13b88ffa7e5ec3b14c39924c", null ],
     [ "listarProjetosAssociadosPessoa", "class_servico_projeto.html#aba3acc935c36ded976279ccef683638f", null ],
     [ "registrarHistoria", "class_servico_projeto.html#a541b5a31760408f0d264a95538d09f36", null ],
-    [ "registrarPlano", "class_servico_projeto.html#a66b20c4ac1d711381a30bf45791e2ff6", null ]
+    [ "registrarPlano", "class_servico_projeto.html#a66b20c4ac1d711381a30bf45791e2ff6", null ],
+    [ "removerAssociacaoProjetoPessoa", "class_servico_projeto.html#a82346a33b139dd82cd9b82f9e40fa44b", null ]
 ];

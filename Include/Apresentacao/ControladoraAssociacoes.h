@@ -21,8 +21,7 @@ private:
     ServicoPessoa* servicoPessoa;             ///< Ponteiro para o componente de regras de negócio de usuários.
     ServicoProjeto* servicoProjeto;           ///< Ponteiro para o componente de regras de negócio de macroescopos.
     ServicoPlanoDeSprint* servicoPlano;       ///< Ponteiro para o componente de regras de negócio de ciclos de execução.
-    ServicoHistoriaUsuario* servicoHistoria;   ///< Ponteiro para o componente de regras de negócio de requisitos (Histórias).
-
+    ServicoHistoriaUsuario* servicoHistoria;  ///< Ponteiro para o componente de regras de negócio de requisitos (Histórias).
 
     /**
      * @brief Renderiza no terminal o menu principal dedicado às operações de vinculação, alocação e listagens associativas.
@@ -40,12 +39,13 @@ private:
     void removerAssociacaoHistoriaPessoa();
 
     /**
-     * @brief Solicita o identificador do usuário e apresenta a listagem de todos os Projetos aos quais a Pessoa está associada.
+     * @brief Interface que gerencia a entrada de dados para remover o vínculo de colaboração na equipe entre um Projeto e uma Pessoa.
      */
-
     void removerAssociacaoProjetoPessoa();
 
-
+    /**
+     * @brief Solicita o identificador do usuário e apresenta a listagem de todos os Projetos aos quais a Pessoa está associada.
+     */
     void listarProjetosPessoa();
 
     /**
@@ -81,7 +81,7 @@ private:
 public:
     /**
      * @brief Construtor da classe controladora que estabelece a injeção de dependência de todos os serviços necessários.
-     * * @param servicoAutenticacao Abstração do serviço de controle de acessos e login.
+     * @param servicoAutenticacao Abstração do serviço de controle de acessos e login.
      * @param servicoPessoa Abstração do serviço de gerenciamento de usuários.
      * @param servicoProjeto Abstração do serviço de gerenciamento de escopos de projetos.
      * @param servicoPlano Abstração do serviço de gerenciamento de ciclos de sprints.
